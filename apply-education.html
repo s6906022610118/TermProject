@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <!-- meta ตรงนี้ทำให้ภาษาไทยกับขนาดมือถือทำงานถูกต้อง -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลการศึกษา | KMUTNB Admission</title>
+    <!-- สามไฟล์นี้แบ่งเป็นของกลาง หัวเว็บ และหน้าตาฟอร์ม -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/application.css">
+</head>
+
+<body>
+    <!-- Navbar ของเว็บ เรียกใช้เหมือนกันทุกหน้า -->
+    <header class="site-header">
+        <div class="container navbar">
+            <!-- โลโก้กับชื่อเว็บกดกลับ index.html ได้ -->
+            <a href="index.html" class="logo">
+                <!-- วงกลมโลโก้ปรับขนาดจาก navbar.css -->
+                <span class="brand-mark"><img src="picture/logo_kmutnb.png"
+                        alt="ตรามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ"></span>
+                <span class="brand-name">
+                    <span class="logo-top">รับสมัครนักศึกษาใหม่ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</span>
+                    <span class="logo-bottom">KMUTNB ADMISSION</span>
+                </span>
+            </a>
+            <!-- เมนูสมัครเรียนถูกขีดเส้นใต้เพราะมี aria-current -->
+            <nav aria-label="เมนูหลัก">
+                <ul class="nav-menu">
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="programs.html">หลักสูตร</a></li>
+                    <li><a href="apply-personal.html" aria-current="page">สมัครเรียน</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- เส้นส้มคั่นส่วนหัว -->
+        <div class="navbar-accent-bar"></div>
+    </header>
+
+    <!-- เนื้อหาขั้นที่ 3 ใช้คลาสฟอร์มชุดเดียวกับสองหน้าก่อน -->
+    <main class="personal-application parent-application">
+        <section class="container personal-content" aria-labelledby="education-page-title">
+            <h1 id="education-page-title">สมัครเรียน</h1>
+
+            <!-- ขั้นที่ 3 มี aria-current เลยแสดงเป็นสีแดง -->
+            <ol class="personal-steps" aria-label="ขั้นตอนสมัครเรียน">
+                <li>1 ข้อมูลส่วนตัว</li>
+                <li>2 ข้อมูลผู้ปกครอง</li>
+                <li aria-current="step">3 ข้อมูลการศึกษา</li>
+                <li>4 หลักสูตร</li>
+                <li>5 ตรวจสอบ</li>
+            </ol>
+
+            <h2>ข้อมูลการศึกษา</h2>
+
+            <!-- หน้านี้เก็บข้อมูลสถานศึกษา ส่วน action จะพาไปหน้าเลือกหลักสูตร -->
+            <form action="select-program.html">
+                <!-- ช่องการศึกษาเรียงสองคอลัมน์ และจะเรียงลงมาบนมือถือ -->
+                <div class="personal-form-grid">
+                    <div class="personal-field">
+                        <label for="school">สถานศึกษาเดิม</label>
+                        <input id="school" name="school" type="text" placeholder="กรอกข้อมูล" required>
+                    </div>
+                    <div class="personal-field">
+                        <label for="province">จังหวัด</label>
+                        <input id="province" name="province" type="text" placeholder="กรอกข้อมูล" required>
+                    </div>
+                    <div class="personal-field">
+                        <label for="studyPlan">แผนการเรียน</label>
+                        <select id="studyPlan" name="studyPlan" required>
+                            <option value="" selected disabled>เลือกแผนการเรียน</option>
+                            <option>วิทยาศาสตร์–คณิตศาสตร์</option>
+                            <option>ศิลป์–คำนวณ</option>
+                            <option>ศิลป์–ภาษา</option>
+                            <option>ปวช. / ปวส.</option>
+                            <option>อื่น ๆ</option>
+                        </select>
+                    </div>
+                    <div class="personal-field">
+                        <label for="gpax">เกรดเฉลี่ยสะสม (GPAX)</label>
+                        <input id="gpax" name="gpax" type="number" min="0" max="4" step="0.01" placeholder="x.xx"
+                            required>
+                    </div>
+                    <div class="personal-field">
+                        <label for="transcript">แนบระเบียนเเสดงผลการเรียน (ปพ.1)</label>
+                        <input id="transcript" name="transcript" type="file" accept="image/*,.pdf" required>
+                    </div>
+                </div>
+
+                <!-- ย้อนกลับไปผู้ปกครอง หรือไปหน้าเลือกหลักสูตร -->
+                <div class="parent-actions">
+                    <a class="btn previous-button" href="apply-parent.html">ย้อนกลับ</a>
+                    <button class="btn btn-primary" type="submit">ถัดไป</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- ส่วนท้ายเว็บ เก็บข้อมูลติดต่อ รูปตึก และโซเชียล -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <!-- ฝั่งซ้ายเก็บที่อยู่ เบอร์โทร และอีเมล -->
+            <div class="footer-contact">
+                <h3 class="footer-heading">ติดต่อมจพ. ปราจีน</h3>
+
+                <div class="footer-info-row">
+                    <img src="picture/location-icon.png" alt="Location" class="footer-icon">
+                    <p>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ วิทยาเขตปราจีนบุรี<br>
+                        129 หมู่ที่ 21 ตำบลเนินหอม อำเภอเมือง จังหวัดปราจีนบุรี 25230</p>
+                </div>
+
+                <div class="footer-info-row">
+                    <img src="picture/phone-icon.png" alt="Phone" class="footer-icon">
+                    <p>เบอร์โทรศัพท์: 037-217-300&nbsp;&nbsp;&nbsp;เบอร์แฟกซ์: 037-217-333</p>
+                </div>
+
+                <div class="footer-info-row">
+                    <img src="picture/email-icon.png" alt="Email" class="footer-icon">
+                    <p>อีเมล: contact-prachinburi@op.kmutnb.ac.th</p>
+                </div>
+            </div>
+
+            <!-- รูปตึกใช้คั่นกลาง Footer -->
+            <div class="footer-building">
+                <img src="picture/ตึกตกแต่งfooter.png" alt="KMUTNB Building">
+            </div>
+
+            <!-- ลิงก์โซเชียลอยู่ฝั่งขวา -->
+            <div class="footer-social">
+                <p class="social-title">ติดตามเราได้ที่</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/search/top?q=fitm" target="_blank" rel="noopener noreferrer" aria-label="Facebook FITM">
+                        <img src="picture/Facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.tiktok.com/@fitm_official" target="_blank" rel="noopener noreferrer" aria-label="TikTok FITM">
+                        <img src="picture/Tiktok.png" alt="Tiktok">
+                    </a>
+                    <a href="https://www.instagram.com/fitm_official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram FITM">
+                        <img src="picture/Instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

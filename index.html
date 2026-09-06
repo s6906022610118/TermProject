@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <!-- UTF-8 ทำให้ภาษาไทยไม่เพี้ยน ส่วน viewport ทำให้หน้าเว็บพอดีกับมือถือ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ชื่อนี้จะไปแสดงบนแท็บของเบราว์เซอร์ -->
+    <title>KMUTNB Admission</title>
+
+    <!-- หน้าแรกใช้ style.css เป็นหลัก แล้วโหลด navbar.css มาดูแลหัวเว็บ -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+
+<body>
+    <!-- Navbar เริ่มตรงนี้ ทุกหน้าจะใช้โครงคล้ายกันเพื่อให้เว็บดูต่อเนื่อง -->
+    <header class="site-header">
+        <div class="container navbar">
+            <!-- โลโก้ทั้งก้อนกดกลับหน้าแรกได้ -->
+            <a href="index.html" class="logo">
+                <!-- navbar.css ครอบรูปนี้เป็นวงกลมและซูมตราให้พอดี -->
+                <span class="brand-mark"><img src="picture/logo_kmutnb.png"
+                        alt="ตรามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ"></span>
+                <!-- ชื่อแบรนด์แบ่งสองบรรทัด จะจัดง่ายกว่าการใช้ br -->
+                <span class="brand-name">
+                    <span class="logo-top">รับสมัครนักศึกษาใหม่ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</span>
+                    <span class="logo-bottom">KMUTNB ADMISSION</span>
+                </span>
+            </a>
+            <!-- aria-current ทำให้รู้ว่าตอนนี้อยู่หน้าแรก และ CSS จะขีดเส้นใต้เมนูนี้ -->
+            <nav aria-label="เมนูหลัก">
+                <ul class="nav-menu">
+                    <li><a href="index.html" aria-current="page">หน้าแรก</a></li>
+                    <li><a href="programs.html">หลักสูตร</a></li>
+                    <li><a href="apply-personal.html">สมัครเรียน</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- แถบส้มเล็ก ๆ ใต้ Navbar -->
+        <div class="navbar-accent-bar"></div>
+    </header>
+
+
+    <!-- เนื้อหาหลักของหน้าแรกอยู่ใน main ทั้งหมด -->
+    <main>
+
+        <!-- Hero คือส่วนแรกที่ผู้ใช้เห็น มีภาพพื้นหลัง ข้อความ และปุ่มหลัก -->
+        <section class="hero">
+
+            <div class="container hero-container">
+
+                <!-- ฝั่งซ้ายของ Hero เป็นข้อความต้อนรับ -->
+                <div class="hero-content">
+
+                    <!-- ป้ายชื่อเว็บตัวเล็กเหนือหัวเรื่อง -->
+                    <div class="hero-label">
+                        KMUTNB Admission
+                    </div>
+
+                    <!-- ข้อความที่สำคัญที่สุดของหน้านี้ เลยใช้ h1 แค่จุดเดียว -->
+                    <h1>
+                        เริ่มต้นเส้นทางของคุณ
+                        ที่มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+                    </h1>
+
+                    <!-- คำอธิบายสั้น ๆ ว่าหน้านี้ช่วยทำอะไรได้บ้าง -->
+                    <p>
+                        ค้นหาหลักสูตร ตรวจสอบข้อมูลการรับสมัคร
+                        และเริ่มต้นสมัครเข้าศึกษาต่อได้ที่นี่
+                    </p>
+
+                    <!-- ปุ่มแรกพาไปดูหลักสูตร ปุ่มที่สองพาไปข้อมูลการรับสมัครด้านล่าง -->
+                    <div class="hero-buttons">
+
+                        <a href="programs.html" class="btn btn-primary">
+                            ดูหลักสูตร
+                        </a>
+
+                        <a href="https://sites.google.com/fitm.kmutnb.ac.th/fitmopenhouse" target="_blank"
+                            class="btn btn-outline">
+                            ข้อมูลการรับสมัคร
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- โลโก้ใหญ่ฝั่งขวาช่วยให้ Hero ไม่โล่งเกินไป -->
+                <div class="hero-logo">
+                    <img src="picture/logo_kmutnb.png" alt="KMUTNB Logo">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- รูปสามใบนี้กดแล้วจะพาไปเว็บรับสมัครของมหาวิทยาลัย -->
+        <!-- ส่วนรอบการรับสมัคร ใช้ id เพื่อให้ปุ่มด้านบนเลื่อนมาหาตรงนี้ได้ -->
+        <section class="section">
+
+            <div class="container">
+
+                <!-- หัวข้อและคำอธิบายของส่วนรอบการสมัคร -->
+                <div class="section-title">
+
+                    <h2>รอบการรับสมัคร</h2>
+
+                    <p>
+                        เลือกรอบการรับสมัครที่เหมาะสมกับคุณ
+                    </p>
+
+                </div>
+
+                <!-- รูปรอบสมัครทั้งสามใบ บนจอคอมเรียงสามช่อง มือถือเรียงลงมา -->
+                <div class="rounds-image-grid">
+
+                    <!-- รอบ 1: รูปทั้งใบเป็นพื้นที่กด -->
+                    <a class="round-img-item" href="https://grad.admission.kmutnb.ac.th/ApplyLogin">
+                        <img src="picture/Round1.png" alt="รอบที่ 1 Portfolio">
+                    </a>
+
+                    <!-- รอบ 2: ตอนนี้ใช้ลิงก์ปลายทางเดียวกับรอบอื่น -->
+                    <a class="round-img-item" href="https://grad.admission.kmutnb.ac.th/ApplyLogin">
+                        <img src="picture/Round2.png" alt="รอบที่ 2 Quota">
+                    </a>
+
+                    <!-- รอบ 3: ถ้ามีลิงก์เฉพาะรอบ ค่อยเปลี่ยนค่า href ตรงนี้ -->
+                    <a class="round-img-item" href="https://grad.admission.kmutnb.ac.th/ApplyLogin">
+                        <img src="picture/Round3.png" alt="รอบที่ 3 Admission">
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- Footer ใช้บอกช่องทางติดต่อ และอยู่ท้ายสุดของหน้า -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <!-- ฝั่งซ้ายเก็บที่อยู่ เบอร์โทร และอีเมล -->
+            <div class="footer-contact">
+                <h3 class="footer-heading">ติดต่อมจพ. ปราจีน</h3>
+
+                <div class="footer-info-row">
+                    <img src="picture/location-icon.png" alt="Location" class="footer-icon">
+                    <p>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ วิทยาเขตปราจีนบุรี<br>
+                        129 หมู่ที่ 21 ตำบลเนินหอม อำเภอเมือง จังหวัดปราจีนบุรี 25230</p>
+                </div>
+
+                <div class="footer-info-row">
+                    <img src="picture/phone-icon.png" alt="Phone" class="footer-icon">
+                    <p>เบอร์โทรศัพท์: 037-217-300&nbsp;&nbsp;&nbsp;เบอร์แฟกซ์: 037-217-333</p>
+                </div>
+
+                <div class="footer-info-row">
+                    <img src="picture/email-icon.png" alt="Email" class="footer-icon">
+                    <p>อีเมล: contact-prachinburi@op.kmutnb.ac.th</p>
+                </div>
+            </div>
+
+            <!-- รูปตึกใช้คั่นกลาง Footer -->
+            <div class="footer-building">
+                <img src="picture/ตึกตกแต่งfooter.png" alt="KMUTNB Building">
+            </div>
+
+            <!-- ลิงก์โซเชียลอยู่ฝั่งขวา -->
+            <div class="footer-social">
+                <p class="social-title">ติดตามเราได้ที่</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/search/top?q=fitm" target="_blank" rel="noopener noreferrer" aria-label="Facebook FITM">
+                        <img src="picture/Facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.tiktok.com/@fitm_official" target="_blank" rel="noopener noreferrer" aria-label="TikTok FITM">
+                        <img src="picture/Tiktok.png" alt="Tiktok">
+                    </a>
+                    <a href="https://www.instagram.com/fitm_official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram FITM">
+                        <img src="picture/Instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

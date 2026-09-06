@@ -1,0 +1,397 @@
+/* ไฟล์นี้คือของกลางของเว็บนะ พวกสี ปุ่ม หน้าแรก และ Footer จะอยู่รวมกันตรงนี้ */
+/* เริ่มจากล้าง margin กับ padding ที่เบราว์เซอร์ชอบใส่มาให้เองก่อน จะได้จัดระยะง่าย */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ตรงนี้ตั้งค่ากับหน้าเว็บทั้งหน้า ค่า zoom คือเหตุผลที่เว็บดูใหญ่ขึ้นประมาณ 120% */
+html {
+    scroll-behavior: smooth;
+    /* ทำให้หน้าเว็บใหญ่ประมาณ 120% แม้เบราว์เซอร์อยู่ที่ 100% */
+    zoom: 1.2;
+}
+
+/* หน้าตาพื้นฐานของข้อความทั้งหมด ถ้าจะเปลี่ยนฟอนต์หลักของเว็บให้มาแก้ตรงนี้ */
+body {
+    background: #f7f7f7;
+    color: #222;
+    font-family: 'AngsanaUPC', sans-serif;
+    line-height: 1.6;
+}
+
+/* ลิงก์จะไม่ขีดเส้นใต้เอง เพราะแต่ละส่วนจะกำหนดหน้าตาของลิงก์อีกที */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ให้ปุ่มกับช่องกรอกใช้ฟอนต์เดียวกับข้อความรอบ ๆ ไม่ใช้ฟอนต์แปลกของเบราว์เซอร์ */
+button,
+input,
+select {
+    font: inherit;
+}
+
+/* เวลาใช้ปุ่ม Tab จะมีกรอบส้มบอกว่าตอนนี้เราเลือกอะไรอยู่ */
+:focus-visible {
+    outline: 3px solid #ff7009;
+    outline-offset: 3px;
+}
+
+/* สีและความกว้างหลักรวมไว้ตรงนี้ เวลาอยากเปลี่ยนธีมทั้งเว็บจะได้แก้จุดเดียว */
+:root {
+    --primary: #ac3520;
+    --primary-dark: #8a2a18;
+    --accent: #ff7009;
+    --white: #fff;
+    --text-light: #666;
+    --container: 1215px;
+}
+
+/* container ช่วยล็อกเนื้อหาไม่ให้กว้างติดขอบจอ และจัดให้อยู่ตรงกลาง */
+.container {
+    width: 90%;
+    max-width: var(--container);
+    margin: 0 auto;
+}
+
+/* .btn คือทรงพื้นฐานของปุ่ม ทุกหน้าหยิบคลาสนี้ไปใช้ร่วมกัน */
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* ปุ่มทึบใช้กับงานหลัก เช่น ถัดไป สมัครเรียน หรือยืนยัน */
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* พอเอาเมาส์ชี้ ปุ่มทึบจะเข้มขึ้นนิดหนึ่งให้รู้ว่ากดได้ */
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+/* ปุ่มขอบใช้กับงานรอง เช่น ปุ่มดูข้อมูลที่ไม่อยากให้เด่นกว่าปุ่มหลัก */
+.btn-outline {
+    border-color: var(--primary);
+    background: transparent;
+    color: var(--primary);
+}
+
+/* ตอนชี้ปุ่มขอบ เราสลับเป็นพื้นแดงเพื่อให้เห็นสถานะชัดขึ้น */
+.btn-outline:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Hero คือภาพใหญ่กับข้อความต้อนรับบนหน้าแรก รูปพื้นหลังเปลี่ยนได้ที่ url ด้านล่าง */
+.hero {
+    padding: 120px 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../picture/pic1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* วางข้อความไว้ซ้ายและโลโก้ใหญ่ไว้ขวา */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* จำกัดความกว้างข้อความ ไม่ให้บรรทัดยาวจนอ่านลำบาก */
+.hero-content {
+    flex: 1;
+    max-width: 620px;
+}
+
+/* ข้อความ KMUTNB Admission ตัวเล็กที่อยู่เหนือหัวเรื่อง */
+.hero-label {
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* หัวเรื่องหลักของหน้าแรก */
+.hero h1 {
+    margin-bottom: 24px;
+    font-size: 52px;
+    line-height: 1.2;
+}
+
+/* คำอธิบายใต้หัวเรื่อง */
+.hero p {
+    margin-bottom: 36px;
+    color: var(--text-light);
+    font-size: 22px;
+}
+
+/* กล่องรวมสองปุ่ม ถ้าจอไม่พอปุ่มจะย้ายลงบรรทัดใหม่ได้ */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* กล่องที่ประคองตรามหาวิทยาลัยด้านขวาให้อยู่กลางพื้นที่ */
+.hero-logo {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ขนาดและเงาของตราใหญ่หน้าแรก */
+.hero-logo img {
+    width: 260px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.15));
+}
+
+/* ส่วนรอบการรับสมัครอยู่ใต้ Hero ของหน้าแรก */
+.section {
+    padding: 100px 0;
+}
+
+/* เว้นระยะระหว่างหัวข้อรอบการรับสมัครกับรูปสามรอบ */
+.section-title {
+    margin-bottom: 50px;
+}
+
+/* หัวข้อ "รอบการรับสมัคร" */
+.section-title h2 {
+    margin-bottom: 10px;
+    font-size: 42px;
+}
+
+/* ประโยคอธิบายใต้หัวข้อ */
+.section-title p {
+    color: var(--text-light);
+    font-size: 18px;
+}
+
+/* บนจอคอมให้รูป Portfolio, Quota และ Admission อยู่สามช่องเท่ากัน */
+.rounds-image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* ตัดส่วนของรูปที่เกินมุมโค้งออก */
+.round-img-item {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* รูปกินพื้นที่ของช่องตัวเองเต็มความกว้าง แต่ไม่บังคับความสูง */
+.round-img-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Footer ใช้ชุดเดียวกันทุกหน้า แบ่งเป็นข้อมูลติดต่อ รูปตึก และโซเชียล */
+.footer {
+    width: 100%;
+    padding: 0 0 18px;
+    background: var(--primary);
+    color: #111;
+}
+
+/* กล่องนี้เอาสามส่วนของ Footer มาเรียงซ้ายไปขวาบนจอคอม */
+.footer-content {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    max-width: 1240px;
+    min-height: 110px;
+    margin: auto;
+    padding: 0 4.5%;
+}
+
+/* ฝั่งซ้ายของ Footer เป็นข้อมูลติดต่อ ให้พื้นที่มากกว่าส่วนอื่นหน่อย */
+.footer-contact {
+    flex: 1.8;
+    min-width: 0;
+    padding-top: 20px;
+}
+
+/* หัวข้อ "ติดต่อมจพ. ปราจีน" */
+.footer-heading {
+    margin: 0 0 12px 22px;
+    color: #111;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* แต่ละแถวเอาไอคอนวางคู่กับข้อความ เช่น ที่อยู่ โทรศัพท์ และอีเมล */
+.footer-info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* ขนาดข้อความในข้อมูลติดต่อ */
+.footer-info-row p {
+    margin: 0;
+    color: #111;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+/* บังคับไอคอนติดต่อให้ขนาดเท่ากัน และเปลี่ยนรูปให้เป็นสีดำ */
+.footer-icon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    object-fit: contain;
+    filter: brightness(0);
+}
+
+/* ช่องกลางของ Footer เอาไว้ใส่รูปเส้นตึกมหาวิทยาลัย */
+.footer-building {
+    display: flex;
+    flex: 0.9;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* รูปตึกยืดตามช่องได้ แต่ไม่ให้สูงเกิน Footer */
+.footer-building img {
+    width: 100%;
+    height: auto;
+    max-height: 90px;
+    object-fit: contain;
+}
+
+/* กล่องสีส้มฝั่งขวา รวมชื่อหัวข้อและไอคอนโซเชียล */
+.footer-social {
+    display: flex;
+    width: 25%;
+    flex-shrink: 0;
+    align-self: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 18px;
+    border-radius: 0 0 16px 16px;
+    background: #cc642d;
+}
+
+/* ข้อความ "ติดตามเราได้ที่" */
+.social-title {
+    margin: 0;
+    color: #111;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* เรียง Facebook, TikTok และ Instagram ให้อยู่บรรทัดเดียวกัน */
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* ทำให้พื้นที่กดของแต่ละลิงก์พอดีกับรูปไอคอน */
+.social-icons a {
+    display: inline-flex;
+}
+
+/* ไอคอนโซเชียลทุกอันใช้ขนาดเดียวกัน */
+.social-icons img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+/* ช่วงนี้ทำงานตอนจอประมาณแท็บเล็ต ลดข้อความและช่องว่างเพื่อไม่ให้ Footer เบียดกัน */
+@media (min-width: 841px) and (max-width: 1200px) {
+    .footer-content {
+        gap: 20px;
+    }
+
+    .footer-heading,
+    .footer-info-row p {
+        font-size: 10px;
+    }
+
+    .footer-heading {
+        margin-bottom: 10px;
+    }
+
+    .footer-social {
+        width: 27%;
+        gap: 0;
+        padding: 14px 12px 0;
+    }
+
+    .social-title {
+        font-size: 10px;
+    }
+
+    .social-icons {
+        gap: 0;
+    }
+
+    .social-icons img {
+        width: 52px;
+        height: 65px;
+        object-fit: cover;
+    }
+}
+
+/* พอหน้าแรกแคบกว่า 1020px ข้อความกับตราใหญ่จะเรียงบนลงล่างแทน */
+@media (max-width: 1020px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-logo img {
+        width: 180px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .rounds-image-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* มือถือเรียง Footer เป็นสามบล็อกจากบนลงล่าง จะได้ไม่ต้องย่อจนอ่านไม่ออก */
+@media (max-width: 840px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 0 6%;
+    }
+
+    .footer-building img {
+        max-width: 180px;
+    }
+
+    .footer-social {
+        width: 100%;
+        border-radius: 16px;
+    }
+}

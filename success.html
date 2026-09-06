@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <!-- ตั้งค่าเอกสารให้รองรับภาษาไทยและมือถือ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครเรียนเรียบร้อย | KMUTNB Admission</title>
+    <!-- หน้า success ใช้ CSS กลาง Navbar และไฟล์เฉพาะของตัวเอง -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/success.css">
+</head>
+
+<body class="success-page">
+    <!-- หัวเว็บยังคงอยู่ เผื่อผู้ใช้ต้องการไปหน้าหลักสูตรหรือเริ่มสมัครใหม่ -->
+    <header class="site-header">
+        <div class="container navbar">
+            <!-- โลโก้กดกลับหน้าแรก -->
+            <a href="index.html" class="logo">
+                <!-- navbar.css ครอบรูปนี้เป็นวงกลมและซูมตราให้พอดี -->
+                <span class="brand-mark"><img src="picture/logo_kmutnb.png"
+                        alt="ตรามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ"></span>
+                <span class="brand-name">
+                    <span class="logo-top">รับสมัครนักศึกษาใหม่ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</span>
+                    <span class="logo-bottom">KMUTNB ADMISSION</span>
+                </span>
+            </a>
+            <!-- เมนูสมัครเรียนถูกเลือก เพราะเพิ่งจบขั้นตอนสมัคร -->
+            <nav aria-label="เมนูหลัก">
+                <ul class="nav-menu">
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="programs.html">หลักสูตร</a></li>
+                    <li><a href="apply-personal.html" aria-current="page">สมัครเรียน</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- เส้นส้มใต้ Navbar -->
+        <div class="navbar-accent-bar"></div>
+    </header>
+    <!-- main ตรงนี้ถูก CSS จัดให้อยู่กลางพื้นที่ว่าง -->
+    <main class="success-main">
+        <!-- วันที่และเลขใบสมัครเป็นข้อมูลตัวอย่าง แก้ข้อความได้ตรงส่วนนี้เลย -->
+        <section class="success-content" aria-labelledby="success-title">
+            <!-- ไอคอนเครื่องหมายถูก ใช้ไฟล์ success.png ที่อยู่ในโฟลเดอร์ picture -->
+            <img class="success-image" src="picture/success.png" alt="สมัครเรียนสำเร็จ">
+            <h1 id="success-title">สมัครเรียนเรียบร้อย</h1>
+            <p class="success-date">5 กันยายน 2569 - 15:21 น.</p>
+            <p class="success-message">ระบบได้รับข้อมูลการสมัครของคุณแล้ว</p>
+            <!-- strong ทำให้หมายเลขใบสมัครหนากว่าข้อความรอบ ๆ -->
+            <p class="success-number">หมายเลขใบสมัครของคุณคือ : <strong>KMUTNB70XXXXX</strong></p>
+            <!-- ปุ่มนี้ปิดเส้นทางสมัครและพาผู้ใช้กลับ index.html -->
+            <a class="btn btn-primary success-home-button" href="index.html">กลับหน้าแรก</a>
+        </section>
+    </main>
+    <!-- Footer ส่วนท้ายของหน้า -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <!-- ฝั่งซ้ายเก็บที่อยู่ เบอร์โทร และอีเมล -->
+            <div class="footer-contact">
+                <h3 class="footer-heading">ติดต่อมจพ. ปราจีน</h3>
+
+                <div class="footer-info-row">
+                    <img src="picture/location-icon.png" alt="Location" class="footer-icon">
+                    <p>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ วิทยาเขตปราจีนบุรี<br>
+                        129 หมู่ที่ 21 ตำบลเนินหอม อำเภอเมือง จังหวัดปราจีนบุรี 25230</p>
+                </div>
+
+                <div class="footer-info-row">
+                    <img src="picture/phone-icon.png" alt="Phone" class="footer-icon">
+                    <p>เบอร์โทรศัพท์: 037-217-300&nbsp;&nbsp;&nbsp;เบอร์แฟกซ์: 037-217-333</p>
+                </div>
+
+                <div class="footer-info-row">
+                    <img src="picture/email-icon.png" alt="Email" class="footer-icon">
+                    <p>อีเมล: contact-prachinburi@op.kmutnb.ac.th</p>
+                </div>
+            </div>
+
+            <!-- รูปตึกใช้คั่นกลาง Footer -->
+            <div class="footer-building">
+                <img src="picture/ตึกตกแต่งfooter.png" alt="KMUTNB Building">
+            </div>
+
+            <!-- ลิงก์โซเชียลอยู่ฝั่งขวา -->
+            <div class="footer-social">
+                <p class="social-title">ติดตามเราได้ที่</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/search/top?q=fitm" target="_blank" rel="noopener noreferrer" aria-label="Facebook FITM">
+                        <img src="picture/Facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.tiktok.com/@fitm_official" target="_blank" rel="noopener noreferrer" aria-label="TikTok FITM">
+                        <img src="picture/Tiktok.png" alt="Tiktok">
+                    </a>
+                    <a href="https://www.instagram.com/fitm_official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram FITM">
+                        <img src="picture/Instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <!-- ตั้งภาษาไทยกับการย่อหน้าบนมือถือ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตรวจสอบข้อมูล | KMUTNB Admission</title>
+    <!-- โหลดของกลาง หัวเว็บ และหน้าตาหน้าตรวจสอบตามลำดับ -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/review.css">
+</head>
+
+<body>
+    <!-- Navbar ยังเลือกหมวดสมัครเรียนอยู่ เพราะหน้านี้เป็นส่วนหนึ่งของขั้นตอนสมัคร -->
+    <header class="site-header">
+        <div class="container navbar">
+            <!-- โลโก้กดกลับหน้าแรกได้ -->
+            <a href="index.html" class="logo">
+                <!-- navbar.css ครอบรูปนี้เป็นวงกลมและซูมตราให้พอดี -->
+                <span class="brand-mark"><img src="picture/logo_kmutnb.png"
+                        alt="ตรามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ"></span>
+                <span class="brand-name">
+                    <span class="logo-top">รับสมัครนักศึกษาใหม่ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</span>
+                    <span class="logo-bottom">KMUTNB ADMISSION</span>
+                </span>
+            </a>
+            <!-- เมนูหลักของเว็บ -->
+            <nav aria-label="เมนูหลัก">
+                <ul class="nav-menu">
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="programs.html">หลักสูตร</a></li>
+                    <li><a href="apply-personal.html" aria-current="page">สมัครเรียน</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- เส้นสีส้มใต้ Navbar -->
+        <div class="navbar-accent-bar"></div>
+    </header>
+    <!-- หน้าสรุปข้อมูลทั้งหมดก่อนผู้ใช้กดยืนยัน -->
+    <main class="application-review">
+        <section class="container review-content" aria-labelledby="review-title">
+            <h1 id="review-title">ตรวจสอบข้อมูลการสมัคร</h1>
+
+            <!-- ขั้นที่ 5 เป็นหน้าปัจจุบัน และทุกขั้นใช้สีแดงเพื่อบอกว่าเดินมาถึงท้ายแล้ว -->
+            <ol class="review-steps" aria-label="ขั้นตอนสมัครเรียน">
+                <li>1 ข้อมูลส่วนตัว</li>
+                <li>2 ข้อมูลผู้ปกครอง</li>
+                <li>3 ข้อมูลการศึกษา</li>
+                <li>4 หลักสูตร</li>
+                <li aria-current="step">5 ตรวจสอบ</li>
+            </ol>
+
+            <!-- ข้อมูลในการ์ดเป็นตัวอย่าง UX/UI ถ้าจะเปลี่ยนข้อความแก้ตรงนี้ได้เลย -->
+            <div class="summary-list">
+                <!-- การ์ดข้อมูลส่วนตัว ลิงก์แก้ไขจะย้อนกลับไปขั้นที่ 1 -->
+                <section class="summary-card">
+                    <div class="summary-text">
+                        <h2>ข้อมูลส่วนตัว</h2>
+                        <p>นางสาวพรพิมล อรโสภา&nbsp; • &nbsp;ไทย&nbsp; • &nbsp;09x-xxx-xxxx</p>
+                    </div>
+                    <a href="apply-personal.html">แก้ไข</a>
+                </section>
+
+                <!-- การ์ดผู้ปกครอง ลิงก์แก้ไขจะย้อนกลับไปขั้นที่ 2 -->
+                <section class="summary-card">
+                    <div class="summary-text">
+                        <h2>ข้อมูลผู้ปกครอง</h2>
+                        <p>นายธนกฤต บุญผาวา&nbsp; • &nbsp;ไทย&nbsp; • &nbsp;08x-xxx-xxxx</p>
+                    </div>
+                    <a href="apply-parent.html">แก้ไข</a>
+                </section>
+
+                <!-- การ์ดการศึกษา ลิงก์แก้ไขจะย้อนกลับไปขั้นที่ 3 -->
+                <section class="summary-card">
+                    <div class="summary-text">
+                        <h2>ข้อมูลการศึกษา</h2>
+                        <p>โรงเรียนพระนครเหนือ&nbsp; • &nbsp;ปราจีนบุรี&nbsp; • &nbsp;วิทย์-คณิต&nbsp; • &nbsp;3.98</p>
+                    </div>
+                    <a href="apply-education.html">แก้ไข</a>
+                </section>
+
+                <!-- การ์ดหลักสูตร ลิงก์แก้ไขจะย้อนกลับไปขั้นที่ 4 -->
+                <section class="summary-card">
+                    <div class="summary-text">
+                        <h2>หลักสูตร</h2>
+                        <p>คณะเทคโนโลยีและการจัดการอุตสาหกรรม&nbsp; • &nbsp;วิศวกรรมสารสนเทศและเครือข่าย&nbsp; •
+                            &nbsp;รอบ Quota&nbsp; • &nbsp;โครงการยื่นคะแนน A-Level</p>
+                    </div>
+                    <a href="select-program.html">แก้ไข</a>
+                </section>
+            </div>
+
+            <!-- required บังคับให้ติ๊กยืนยันก่อน ส่วน action พาไปหน้าสำเร็จ -->
+            <form class="review-confirmation" action="success.html">
+                <label>
+                    <input type="checkbox" name="confirm" required>
+                    <span>ยืนยันว่าข้อมูลถูกต้อง</span>
+                </label>
+                <button class="btn btn-primary" type="submit">ยืนยันการสมัคร</button>
+            </form>
+        </section>
+    </main>
+    <!-- Footer เริ่มตรงนี้ -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <!-- ฝั่งซ้ายเก็บที่อยู่ เบอร์โทร และอีเมล -->
+            <div class="footer-contact">
+                <h3 class="footer-heading">ติดต่อมจพ. ปราจีน</h3>
+
+                <div class="footer-info-row">
+                    <img src="picture/location-icon.png" alt="Location" class="footer-icon">
+                    <p>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ วิทยาเขตปราจีนบุรี<br>
+                        129 หมู่ที่ 21 ตำบลเนินหอม อำเภอเมือง จังหวัดปราจีนบุรี 25230</p>
+                </div>
+
+                <div class="footer-info-row">
+                    <img src="picture/phone-icon.png" alt="Phone" class="footer-icon">
+                    <p>เบอร์โทรศัพท์: 037-217-300&nbsp;&nbsp;&nbsp;เบอร์แฟกซ์: 037-217-333</p>
+                </div>
+
+                <div class="footer-info-row">
+                    <img src="picture/email-icon.png" alt="Email" class="footer-icon">
+                    <p>อีเมล: contact-prachinburi@op.kmutnb.ac.th</p>
+                </div>
+            </div>
+
+            <!-- รูปตึกใช้คั่นกลาง Footer -->
+            <div class="footer-building">
+                <img src="picture/ตึกตกแต่งfooter.png" alt="KMUTNB Building">
+            </div>
+
+            <!-- ลิงก์โซเชียลอยู่ฝั่งขวา -->
+            <div class="footer-social">
+                <p class="social-title">ติดตามเราได้ที่</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/search/top?q=fitm" target="_blank" rel="noopener noreferrer" aria-label="Facebook FITM">
+                        <img src="picture/Facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.tiktok.com/@fitm_official" target="_blank" rel="noopener noreferrer" aria-label="TikTok FITM">
+                        <img src="picture/Tiktok.png" alt="Tiktok">
+                    </a>
+                    <a href="https://www.instagram.com/fitm_official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram FITM">
+                        <img src="picture/Instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

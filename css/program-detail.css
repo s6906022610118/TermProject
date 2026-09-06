@@ -1,0 +1,68 @@
+/* หน้ารายละเอียด IT, INE และ INET ใช้ CSS ชุดเดียวกัน เพราะโครงหน้าตาเหมือนกัน */
+/* body เป็น flex เพื่อดัน Footer ไปท้ายจอ ในหน้าที่เนื้อหาสั้น */
+.course-detail-page {
+    font-family: 'Leelawadee UI', Tahoma, Arial, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.2;
+    background: white;
+    /* หักค่า zoom กลับตอนคำนวณความสูง เพื่อให้ Footer ลงไปอยู่ท้ายหน้าจอพอดี */
+    min-height: calc(100vh / 1.2);
+    min-height: calc(100dvh / 1.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar กับ Footer ไม่ต้องยืดตามพื้นที่ เหลือที่เท่าไรให้ main เป็นคนรับ */
+.course-detail-page > .site-header,
+.course-detail-page > .footer { flex-shrink: 0; }
+
+
+/* กล่องเนื้อหาหลักยืดกินพื้นที่ว่าง เลยช่วยให้ Footer อยู่ด้านล่าง */
+.course-detail-page .course-container { width: 89%; max-width: 1120px; min-height: 0; margin: 0 auto; padding: 30px 0 48px; flex: 1; }
+/* แถวหัวเรื่องวางชื่อหลักสูตรไว้ซ้ายและปุ่มสมัครไว้ขวา */
+.course-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+/* อนุญาตให้ฝั่งข้อความหดได้ เวลาหน้าจอเริ่มแคบ */
+.course-heading > div { min-width: 0; }
+/* ชื่อปริญญาบรรทัดเล็กเหนือชื่อสาขา */
+.degree-name { font-size: 16px; font-weight: bold; }
+/* ชื่อสาขาตัวใหญ่ เช่น เทคโนโลยีสารสนเทศ (IT) */
+.course-heading h1 { font-size: 28px; line-height: 1.3; margin: 4px 0 8px; }
+/* ปุ่มสมัครเรียนด้านขวา กดแล้วไปหน้า apply-personal.html */
+.course-detail-page .course-apply { min-width: 116px; padding: 10px 20px; margin: 7px 10px 0 0; border-radius: 5px; font-size: 13px; text-align: center; flex-shrink: 0; transition: none; }
+/* ส่วนคำอธิบายสั้น ๆ ว่าหลักสูตรเรียนเกี่ยวกับอะไร */
+.course-about { margin: 28px 0 18px; }
+/* หัวข้อ "เกี่ยวกับหลักสูตร" */
+.course-about h2 { font-size: 17px; margin-bottom: 8px; }
+
+/* ข้อมูลหลักสูตรอยู่กล่องกว้าง ส่วนอาชีพอยู่กล่องแคบ */
+.course-columns { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr); gap: 32px; align-items: stretch; }
+/* หน้าตาร่วมของกล่องคุณสมบัติกับกล่องอาชีพ */
+.course-facts, .course-careers { border: 1.5px solid #b53622; border-radius: 6px; padding: 12px 14px; font-size: 12px; line-height: 1.25; }
+/* สองกล่องสูงเท่ากัน แต่ยังยืดได้ถ้าข้อความยาวขึ้น */
+.course-columns > section { min-width: 0; min-height: 174px; }
+/* กล่องซ้ายใช้พื้นครีมเพื่อแยกจากกล่องอาชีพ */
+.course-facts { background: #fff0da; }
+/* หัวข้อในกล่องใช้ขนาดเดียวกับเนื้อหา ตามแบบที่อ้างอิงมา */
+.course-facts h2, .course-careers h2 { font-size: inherit; line-height: inherit; }
+/* หัวข้อย่อยถัดไปในกล่องซ้ายต้องเว้นด้านบนหน่อย */
+.course-facts h2:not(:first-child) { margin-top: 14px; }
+/* เยื้องข้อความรายละเอียดในกล่องซ้ายให้ดูเหมือนย่อหน้า */
+.course-facts p { text-indent: 18px; }
+/* กล่องขวาเป็นรายการอาชีพ ใช้พื้นขาวและ padding เยอะกว่านิดหนึ่ง */
+.course-careers { padding: 24px 17px; background: white; }
+/* ขยับ bullet ของรายการอาชีพไม่ให้ติดขอบกล่อง */
+.course-careers ul { padding-left: 20px; }
+
+/* จอแคบเรียงกล่องข้อมูลลงมาเป็นคอลัมน์เดียว */
+@media (max-width: 1000px) {
+    .course-columns { grid-template-columns: 1fr; gap: 20px; }
+    .course-columns > section { min-height: 0; }
+}
+/* มือถือวางปุ่มสมัครลงใต้ชื่อหลักสูตร และเพิ่มพื้นที่ในกล่องให้อ่านง่าย */
+@media (max-width: 600px) {
+    .course-heading { flex-direction: column; gap: 14px; }
+    .course-heading h1 { font-size: 26px; }
+    .course-detail-page .course-apply { margin: 0; }
+    .course-about { margin-top: 26px; }
+    .course-facts, .course-careers { padding: 16px; }
+}

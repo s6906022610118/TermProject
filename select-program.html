@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <!-- ตั้งค่าภาษาไทยและบอกมือถือให้ใช้ความกว้างจริงของหน้าจอ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เลือกหลักสูตร | KMUTNB Admission</title>
+    <!-- โหลด CSS ของกลาง Navbar และฟอร์มตามลำดับ -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/application.css">
+</head>
+
+<body>
+    <!-- หัวเว็บชุดเดิม เพื่อให้ผู้ใช้กลับไปหน้าอื่นได้ทุกขั้น -->
+    <header class="site-header">
+        <div class="container navbar">
+            <!-- กดโลโก้แล้วกลับหน้าแรก -->
+            <a href="index.html" class="logo">
+                <!-- navbar.css ครอบรูปนี้เป็นวงกลมและซูมตราให้พอดี -->
+                <span class="brand-mark"><img src="picture/logo_kmutnb.png"
+                        alt="ตรามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ"></span>
+                <span class="brand-name">
+                    <span class="logo-top">รับสมัครนักศึกษาใหม่ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</span>
+                    <span class="logo-bottom">KMUTNB ADMISSION</span>
+                </span>
+            </a>
+            <!-- หมวดสมัครเรียนเป็นหน้าปัจจุบัน -->
+            <nav aria-label="เมนูหลัก">
+                <ul class="nav-menu">
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="programs.html">หลักสูตร</a></li>
+                    <li><a href="apply-personal.html" aria-current="page">สมัครเรียน</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- เส้นส้มใต้หัวเว็บ -->
+        <div class="navbar-accent-bar"></div>
+    </header>
+
+    <!-- เนื้อหาขั้นที่ 4 สำหรับเลือกคณะ หลักสูตร รอบ และโครงการ -->
+    <main class="personal-application parent-application">
+        <section class="container personal-content" aria-labelledby="program-page-title">
+            <h1 id="program-page-title">สมัครเรียน</h1>
+
+            <!-- ขั้นหลักสูตรคือขั้นปัจจุบัน ดูจาก aria-current -->
+            <ol class="personal-steps" aria-label="ขั้นตอนสมัครเรียน">
+                <li>1 ข้อมูลส่วนตัว</li>
+                <li>2 ข้อมูลผู้ปกครอง</li>
+                <li>3 ข้อมูลการศึกษา</li>
+                <li aria-current="step">4 หลักสูตร</li>
+                <li>5 ตรวจสอบ</li>
+            </ol>
+
+            <h2>หลักสูตร</h2>
+
+            <!-- ตัวเลือกทั้งสี่ช่องเป็นตัวอย่าง UX/UI และ action จะพาไปหน้าตรวจสอบ -->
+            <form action="review.html">
+                <!-- select ทั้งสี่ช่องเป็นข้อมูลตัวอย่าง ยังไม่ได้เปลี่ยนตามกันแบบระบบจริง -->
+                <div class="personal-form-grid">
+                    <div class="personal-field">
+                        <label for="faculty">คณะ</label>
+                        <select id="faculty" name="faculty" required>
+                            <option value="" selected disabled>เลือกคณะ</option>
+                            <option value="fitm">คณะเทคโนโลยีและการจัดการอุตสาหกรรม (FITM)</option>
+                            <option value="engineering">คณะวิศวกรรมศาสตร์</option>
+                            <option value="applied-science">คณะวิทยาศาสตร์ประยุกต์</option>
+                            <option value="agro-industry">คณะอุตสาหกรรมเกษตร</option>
+                        </select>
+                    </div>
+
+                    <div class="personal-field">
+                        <label for="major">สาขา</label>
+                        <select id="major" name="major" required>
+                            <option value="" selected disabled>เลือกสาขา</option>
+                            <option value="it">เทคโนโลยีสารสนเทศ (IT)</option>
+                            <option value="ine">วิศวกรรมสารสนเทศและเครือข่าย (INE)</option>
+                            <option value="inet">วิศวกรรมสารสนเทศและเครือข่าย (เทียบโอน) (INET)</option>
+                            <option value="amt">เทคโนโลยีเครื่องจักรกลเกษตร (AMT)</option>
+                            <option value="im">การจัดการอุตสาหกรรม (IM)</option>
+                            <option value="ca">คอมพิวเตอร์ช่วยออกแบบและบริหารงานก่อสร้าง (CA)</option>
+                        </select>
+                    </div>
+
+                    <div class="personal-field">
+                        <label for="round">รอบการสมัคร</label>
+                        <select id="round" name="round" required>
+                            <option value="" selected disabled>เลือกรอบการรับสมัคร</option>
+                            <option value="portfolio">รอบที่ 1 Portfolio</option>
+                            <option value="quota">รอบที่ 2 โควตา (Quota)</option>
+                            <option value="admission">รอบที่ 3 Admission</option>
+                            <option value="direct">รอบที่ 4 รับตรงอิสระ (Direct Admission)</option>
+                        </select>
+                    </div>
+
+                    <div class="personal-field">
+                        <label for="project">โครงการ</label>
+                        <select id="project" name="project" required>
+                            <option value="" selected disabled>เลือกโครงการ</option>
+                            <option value="written-exam">โครงการรับตรงสอบข้อเขียน</option>
+                            <option value="good-academic">โครงการเรียนดี</option>
+                            <option value="talent">โครงการความสามารถพิเศษ</option>
+                            <option value="regional-quota">โครงการโควตาพื้นที่</option>
+                            <option value="educational-opportunity">โครงการส่งเสริมโอกาสทางการศึกษา</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- ย้อนกลับไปหน้าการศึกษา หรือกดถัดไปเพื่อดูหน้าสรุป -->
+                <div class="parent-actions">
+                    <a class="btn previous-button" href="apply-education.html">ย้อนกลับ</a>
+                    <button class="btn btn-primary" type="submit">ถัดไป</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer ของเว็บ เริ่มจากตรงนี้ -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <!-- ฝั่งซ้ายเก็บที่อยู่ เบอร์โทร และอีเมล -->
+            <div class="footer-contact">
+                <h3 class="footer-heading">ติดต่อมจพ. ปราจีน</h3>
+
+                <div class="footer-info-row">
+                    <img src="picture/location-icon.png" alt="Location" class="footer-icon">
+                    <p>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ วิทยาเขตปราจีนบุรี<br>
+                        129 หมู่ที่ 21 ตำบลเนินหอม อำเภอเมือง จังหวัดปราจีนบุรี 25230</p>
+                </div>
+
+                <div class="footer-info-row">
+                    <img src="picture/phone-icon.png" alt="Phone" class="footer-icon">
+                    <p>เบอร์โทรศัพท์: 037-217-300&nbsp;&nbsp;&nbsp;เบอร์แฟกซ์: 037-217-333</p>
+                </div>
+
+                <div class="footer-info-row">
+                    <img src="picture/email-icon.png" alt="Email" class="footer-icon">
+                    <p>อีเมล: contact-prachinburi@op.kmutnb.ac.th</p>
+                </div>
+            </div>
+
+            <!-- รูปตึกใช้คั่นกลาง Footer -->
+            <div class="footer-building">
+                <img src="picture/ตึกตกแต่งfooter.png" alt="KMUTNB Building">
+            </div>
+
+            <!-- ลิงก์โซเชียลอยู่ฝั่งขวา -->
+            <div class="footer-social">
+                <p class="social-title">ติดตามเราได้ที่</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/search/top?q=fitm" target="_blank" rel="noopener noreferrer" aria-label="Facebook FITM">
+                        <img src="picture/Facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.tiktok.com/@fitm_official" target="_blank" rel="noopener noreferrer" aria-label="TikTok FITM">
+                        <img src="picture/Tiktok.png" alt="Tiktok">
+                    </a>
+                    <a href="https://www.instagram.com/fitm_official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram FITM">
+                        <img src="picture/Instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

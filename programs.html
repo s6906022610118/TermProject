@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <!-- meta สองตัวนี้ดูแลภาษาไทยและหน้าจอมือถือ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หลักสูตร | KMUTNB Admission</title>
+    <!-- style คือของกลาง programs คือเนื้อหาหน้านี้ navbar คือหัวเว็บ -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/programs.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+
+<body class="programs-page">
+    <!-- Navbar หน้าเลือกหลักสูตร -->
+    <header class="site-header">
+        <div class="container navbar">
+            <!-- กดโลโก้แล้วกลับหน้าแรก -->
+            <a href="index.html" class="logo">
+                <!-- navbar.css ครอบรูปนี้เป็นวงกลมและซูมตราให้พอดี -->
+                <span class="brand-mark"><img src="picture/logo_kmutnb.png"
+                        alt="ตรามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ"></span>
+                <span class="brand-name">
+                    <span class="logo-top">รับสมัครนักศึกษาใหม่ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</span>
+                    <span class="logo-bottom">KMUTNB ADMISSION</span>
+                </span>
+            </a>
+            <!-- aria-current อยู่ที่หลักสูตร เลยมีเส้นใต้บอกหน้าปัจจุบัน -->
+            <nav aria-label="เมนูหลัก">
+                <ul class="nav-menu">
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="programs.html" aria-current="page">หลักสูตร</a></li>
+                    <li><a href="apply-personal.html">สมัครเรียน</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- เส้นส้มคั่นระหว่างหัวเว็บกับเนื้อหา -->
+        <div class="navbar-accent-bar"></div>
+    </header>
+    <!-- เนื้อหาหลักของหน้ารวมหลักสูตร -->
+    <main>
+        <section class="programs-section container" aria-labelledby="programs-heading">
+            <!-- h1 เป็นชื่อหลักของหน้านี้ -->
+            <h1 id="programs-heading">ค้นหาคณะและหลักสูตร</h1>
+            <div class="search-box">
+                <!-- ช่องนี้มีไว้เป็นหน้าตา UX/UI ยังไม่ได้ค้นหาจริงเพราะโปรเจกต์ไม่ใช้ JavaScript -->
+                <label for="program-search">ค้นหาหลักสูตร</label>
+                <input id="program-search" type="search" placeholder="เช่น วิศวกรรมสารสนเทศและเครือข่าย">
+            </div>
+            <!-- แบ่งชื่อภาควิชาก่อน แล้วค่อยแสดงหลักสูตรที่อยู่ข้างใน -->
+            <h2 class="department-heading">ภาควิชาเทคโนโลยีสารสนเทศ</h2>
+            <h3 class="courses-heading">หลักสูตร</h3>
+            <!-- การ์ดหนึ่งใบมีรูป ชื่อหลักสูตร และลิงก์ไปหน้ารายละเอียด -->
+            <div class="card-grid">
+                <!-- การ์ด IT กดปุ่มแล้วไป program-it.html -->
+                <article class="program-card">
+                    <div class="program-photo">
+                        <img src="picture/IT.jpg" alt="นักศึกษาและอาจารย์หลักสูตร IT ในห้องเรียน">
+                        <span class="program-badge">IT</span>
+                    </div>
+                    <div class="program-body">
+                        <h4>หลักสูตรวิทยาศาสตรบัณฑิต (วท.บ.) 4 ปี<br>สาขาวิชาเทคโนโลยีสารสนเทศ</h4>
+                        <p>(หลักสูตรปรับปรุง พ.ศ. 2567)</p>
+                        <a class="btn btn-primary" href="program-it.html"
+                            aria-label="ดูรายละเอียดหลักสูตร IT">ดูรายละเอียด</a>
+                    </div>
+                </article>
+                <!-- การ์ด INE กดปุ่มแล้วไป program-ine.html -->
+                <article class="program-card">
+                    <div class="program-photo">
+                        <img src="picture/INE.jpg" alt="นักศึกษาและอาจารย์หลักสูตร INE ที่โต๊ะคอมพิวเตอร์">
+                        <span class="program-badge">INE</span>
+                    </div>
+                    <div class="program-body">
+                        <h4>หลักสูตรวิศวกรรมศาสตรบัณฑิต (วศ.บ.) 4 ปี<br>สาขาวิชาวิศวกรรมสารสนเทศและเครือข่าย</h4>
+                        <p>(หลักสูตรเสริมทักษะภาษาอังกฤษ)</p>
+                        <a class="btn btn-primary" href="program-ine.html"
+                            aria-label="ดูรายละเอียดหลักสูตร INE">ดูรายละเอียด</a>
+                    </div>
+                </article>
+                <!-- การ์ด INET กดปุ่มแล้วไป program-inet.html -->
+                <article class="program-card">
+                    <div class="program-photo">
+                        <img src="picture/INET.jpg" alt="นักศึกษาหลักสูตร INET กำลังใช้คอมพิวเตอร์ในห้องปฏิบัติการ">
+                        <span class="program-badge">INET</span>
+                    </div>
+                    <div class="program-body">
+                        <h4>หลักสูตรวิศวกรรมศาสตรบัณฑิต (วศ.บ.)<br>เทียบโอน 3 ปี<br>สาขาวิชาวิศวกรรมสารสนเทศและเครือข่าย
+                        </h4>
+                        <p>(หลักสูตรเสริมทักษะภาษาอังกฤษ)</p>
+                        <a class="btn btn-primary" href="program-inet.html"
+                            aria-label="ดูรายละเอียดหลักสูตร INET">ดูรายละเอียด</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <!-- Footer ข้อมูลติดต่อของมหาวิทยาลัย -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <!-- ฝั่งซ้ายเก็บที่อยู่ เบอร์โทร และอีเมล -->
+            <div class="footer-contact">
+                <h3 class="footer-heading">ติดต่อมจพ. ปราจีน</h3>
+
+                <div class="footer-info-row">
+                    <img src="picture/location-icon.png" alt="Location" class="footer-icon">
+                    <p>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ วิทยาเขตปราจีนบุรี<br>
+                        129 หมู่ที่ 21 ตำบลเนินหอม อำเภอเมือง จังหวัดปราจีนบุรี 25230</p>
+                </div>
+
+                <div class="footer-info-row">
+                    <img src="picture/phone-icon.png" alt="Phone" class="footer-icon">
+                    <p>เบอร์โทรศัพท์: 037-217-300&nbsp;&nbsp;&nbsp;เบอร์แฟกซ์: 037-217-333</p>
+                </div>
+
+                <div class="footer-info-row">
+                    <img src="picture/email-icon.png" alt="Email" class="footer-icon">
+                    <p>อีเมล: contact-prachinburi@op.kmutnb.ac.th</p>
+                </div>
+            </div>
+
+            <!-- รูปตึกใช้คั่นกลาง Footer -->
+            <div class="footer-building">
+                <img src="picture/ตึกตกแต่งfooter.png" alt="KMUTNB Building">
+            </div>
+
+            <!-- ลิงก์โซเชียลอยู่ฝั่งขวา -->
+            <div class="footer-social">
+                <p class="social-title">ติดตามเราได้ที่</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/search/top?q=fitm" target="_blank" rel="noopener noreferrer" aria-label="Facebook FITM">
+                        <img src="picture/Facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.tiktok.com/@fitm_official" target="_blank" rel="noopener noreferrer" aria-label="TikTok FITM">
+                        <img src="picture/Tiktok.png" alt="Tiktok">
+                    </a>
+                    <a href="https://www.instagram.com/fitm_official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram FITM">
+                        <img src="picture/Instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

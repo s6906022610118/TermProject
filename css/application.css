@@ -1,0 +1,298 @@
+/* ไฟล์นี้ดูแลฟอร์มสมัคร 4 หน้า: ส่วนตัว ผู้ปกครอง การศึกษา และเลือกหลักสูตร */
+/* ตั้งพื้นขาวกับฟอนต์ให้ทุกหน้าที่ใช้คลาส personal-application */
+.personal-application {
+    background: #fff;
+    font-family: 'Leelawadee UI', Tahoma, Arial, sans-serif;
+}
+
+/* กล่องนี้กำหนดความกว้างและระยะของเนื้อหาฟอร์มทั้งหมด */
+.personal-content {
+    width: 84%;
+    max-width: 1080px;
+    padding: 34px 0 48px;
+}
+
+/* หน้าขั้นที่ 2-4 ใช้พื้นที่ด้านบนน้อยกว่าหน้าข้อมูลส่วนตัวนิดหนึ่ง */
+.parent-application .personal-content {
+    padding-top: 30px;
+}
+
+/* ชื่อหน้าหลัก เช่น "สมัครเรียน" */
+.personal-content > h1 {
+    margin-bottom: 8px;
+    font-size: 30px;
+    line-height: 1.25;
+}
+
+/* หัวข้อย่อยของฟอร์ม เช่น "ข้อมูลส่วนตัว" หรือ "ข้อมูลการศึกษา" */
+.personal-content > h2 {
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+/* แถบห้าขั้นนี้บอกว่าผู้สมัครกำลังอยู่หน้าไหนของกระบวนการ */
+.personal-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 30px;
+    list-style: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* แต่ละ li คือหนึ่งขั้น ใช้ flex เพื่อวางข้อความกับเส้นคั่น */
+.personal-steps li {
+    display: flex;
+    align-items: center;
+    color: #222;
+}
+
+/* สร้างเส้นเชื่อมระหว่างขั้นด้วย CSS เลย ไม่ต้องใส่ขีดไว้ใน HTML */
+.personal-steps li:not(:last-child)::after {
+    content: "";
+    width: 18px;
+    height: 2px;
+    margin: 0 10px;
+    background: #222;
+}
+
+/* ขั้นที่มี aria-current="step" จะเป็นสีแดง เพื่อบอกว่ากำลังกรอกหน้านี้ */
+.personal-steps li[aria-current="step"] {
+    color: #c91818;
+}
+
+/* แถวชื่อมีคำนำหน้าช่องเล็ก แล้วตามด้วยชื่อและนามสกุล */
+.thai-name-row,
+.english-name-row,
+.parent-name-row {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+    margin-bottom: 14px;
+}
+
+.parent-name-row {
+    gap: 38px;
+    margin-bottom: 12px;
+}
+
+/* ช่องข้อมูลทั่วไปแบ่งเป็นสองฝั่งบนจอคอม จะได้ไม่ต้องเลื่อนหน้ายาวเกินไป */
+.personal-form-grid,
+/* ช่องของหน้าผู้ปกครองชิดกันกว่าหน้าส่วนตัวนิดหนึ่งตามแบบ */
+.parent-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 50px;
+    row-gap: 14px;
+}
+
+.parent-grid {
+    row-gap: 12px;
+}
+
+/* personal-field คือกล่องเล็กหนึ่งชุดที่มี label คู่กับ input หรือ select */
+.personal-field {
+    min-width: 0;
+}
+
+/* ชื่อช่องกรอกอยู่เหนือกล่อง เช่น ชื่อ นามสกุล หรือเบอร์โทร */
+.personal-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* หน้าตากลางของช่องกรอกกับช่องเลือก ทำให้ทุกหน้าดูเป็นชุดเดียวกัน */
+.personal-field input,
+.personal-field select {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #d4d8dd;
+    border-radius: 4px;
+    background: #fff;
+    color: #333;
+    font: inherit;
+    font-size: 11px;
+}
+
+/* ข้อความตัวอย่างในช่องกรอกใช้สีอ่อน เพื่อไม่ให้สับสนกับข้อมูลจริง */
+.personal-field input::placeholder {
+    color: #a2a5a8;
+}
+
+/* ช่องแนบไฟล์ต้องใช้ padding คนละนิดกับช่องข้อความ ไม่งั้นปุ่ม Choose File จะเบี้ยว */
+.personal-field input[type="file"] {
+    padding: 7px 8px;
+    color: #777;
+}
+
+/* หน้าผู้ปกครองแบ่งข้อมูลเป็นบิดา มารดา และผู้ปกครอง */
+/* fieldset หนึ่งชุดคือข้อมูลของคนหนึ่งคน เช่น บิดา มารดา หรือผู้ปกครอง */
+.parent-section {
+    min-width: 0;
+    margin: 0 0 22px;
+    padding: 0;
+    border: 0;
+}
+
+/* legend คือชื่อชุดข้อมูลที่วางอยู่บน fieldset */
+.parent-section legend {
+    width: 100%;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* เว้นช่องก่อนส่วนผู้ปกครอง เพราะส่วนนี้ไม่มีตัวเลือกสถานะการมีชีวิต */
+.guardian-section {
+    margin-top: 28px;
+}
+
+/* กล่องคำถามสถานะการมีชีวิตของบิดาและมารดา */
+.life-status {
+    margin-bottom: 12px;
+}
+
+/* หัวข้อสั้น ๆ เหนือตัวเลือก radio */
+.life-status p {
+    margin-bottom: 7px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* เรียงตัวเลือก มีชีวิตอยู่ เสียชีวิตแล้ว และไม่ทราบ ในบรรทัดเดียว */
+.radio-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* label ครอบวงกลมกับข้อความไว้ด้วยกัน เลยกดตรงข้อความได้ด้วย */
+.radio-options label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+/* ขนาดวงกลม radio และใช้สีแดงของเว็บตอนถูกเลือก */
+.radio-options input {
+    width: 15px;
+    height: 15px;
+    accent-color: var(--primary);
+}
+
+/* หน้าข้อมูลส่วนตัวมีแค่ปุ่มถัดไป จึงชิดขวา */
+.personal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 38px;
+}
+
+/* หน้าขั้นต่อ ๆ มามีทั้งย้อนกลับและถัดไป เลยแยกปุ่มไปคนละฝั่ง */
+.parent-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 38px;
+}
+
+/* ทำปุ่มของทุกหน้าฟอร์มให้ขนาดใกล้กัน */
+.personal-actions .btn,
+.parent-actions .btn {
+    min-width: 134px;
+    padding: 11px 24px;
+    border-radius: 5px;
+    font: inherit;
+    font-size: 13px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+/* ปุ่มถัดไปหน้าแรกไม่ต้องมีเส้นขอบเพิ่ม เพราะใช้พื้นแดงอยู่แล้ว */
+.personal-actions .btn {
+    border: 0;
+}
+
+/* ปุ่มย้อนกลับใช้พื้นขาวขอบแดง จะได้ไม่เด่นแย่งปุ่มถัดไป */
+.previous-button {
+    border: 1px solid #d21a1a;
+    background: #fff;
+    color: #222;
+}
+
+/* จอแท็บเล็ตลดช่องว่างและช่องคำนำหน้า เพื่อให้สองคอลัมน์ยังอยู่ได้ */
+@media (max-width: 900px) {
+    .personal-content {
+        width: 88%;
+    }
+
+    .thai-name-row,
+    .english-name-row,
+    .parent-name-row {
+        grid-template-columns: 120px minmax(0, 1fr) minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .parent-name-row {
+        gap: 18px;
+    }
+
+    .personal-form-grid,
+    .parent-grid {
+        column-gap: 24px;
+    }
+}
+
+/* มือถือเรียงทุกช่องลงมาเป็นคอลัมน์เดียว เพื่อให้ช่องกรอกกว้างและกดง่าย */
+@media (max-width: 720px) {
+    .personal-content {
+        padding: 28px 0 38px;
+    }
+
+    .personal-content > h1 {
+        font-size: 27px;
+    }
+
+    .personal-steps {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 14px;
+    }
+
+    .personal-steps li:not(:last-child)::after {
+        display: none;
+    }
+
+    .thai-name-row,
+    .english-name-row,
+    .parent-name-row,
+    .personal-form-grid,
+    .parent-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .parent-section {
+        margin-bottom: 32px;
+    }
+
+    .guardian-section {
+        margin-top: 0;
+    }
+
+    .personal-actions .btn {
+        width: 100%;
+    }
+
+    .parent-actions .btn {
+        min-width: 0;
+        flex: 1;
+    }
+}
