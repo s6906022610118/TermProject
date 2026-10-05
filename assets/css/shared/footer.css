@@ -1,0 +1,156 @@
+.footer {
+    width: 100%;
+    padding: 0 0 18px;
+    background: var(--primary);
+    color: #111;
+}
+
+.footer-content {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    max-width: 1240px;
+    min-height: 110px;
+    margin: auto;
+    padding: 0 4.5%;
+}
+
+.footer-contact {
+    flex: 1.8;
+    min-width: 0;
+    padding-top: 20px;
+}
+
+.footer-heading {
+    margin: 0 0 12px 22px;
+    color: #111;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer-info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-info-row p {
+    margin: 0;
+    color: #111;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.footer-icon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    object-fit: contain;
+    filter: brightness(0);
+}
+
+.footer-building {
+    display: flex;
+    flex: 0.9;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-building img {
+    width: 100%;
+    height: auto;
+    max-height: 90px;
+    object-fit: contain;
+}
+
+.footer-social {
+    display: flex;
+    width: 25%;
+    flex-shrink: 0;
+    align-self: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 18px;
+    border-radius: 0 0 16px 16px;
+    background: #cc642d;
+}
+
+.social-title {
+    margin: 0;
+    color: #111;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.social-icons a {
+    display: inline-flex;
+}
+
+.social-icons img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+@media (min-width: 841px) and (max-width: 1200px) {
+    .footer-content {
+        gap: 20px;
+    }
+
+    .footer-heading,
+    .footer-info-row p {
+        font-size: 10px;
+    }
+
+    .footer-heading {
+        margin-bottom: 10px;
+    }
+
+    .footer-social {
+        width: 27%;
+        gap: 0;
+        padding: 14px 12px 0;
+    }
+
+    .social-title {
+        font-size: 10px;
+    }
+
+    .social-icons {
+        gap: 0;
+    }
+
+    .social-icons img {
+        width: 52px;
+        height: 65px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 840px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 0 6%;
+    }
+
+    .footer-building img {
+        max-width: 180px;
+    }
+
+    .footer-social {
+        width: 100%;
+        border-radius: 16px;
+    }
+}

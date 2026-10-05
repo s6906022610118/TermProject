@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+    <head>
+        <!-- ตั้งภาษาไทยกับการย่อหน้าบนมือถือ -->
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>ตรวจสอบข้อมูล | KMUTNB Admission</title>
+        <!-- โหลดของกลาง หัวเว็บ และหน้าตาหน้าตรวจสอบตามลำดับ -->
+        <link href="../../assets/css/shared/base.css" rel="stylesheet"/>
+        <link href="../../assets/css/shared/footer.css" rel="stylesheet"/>
+        <link href="../../assets/css/shared/navbar.css" rel="stylesheet"/>
+        <link href="../../assets/css/pages/review.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container navbar">
+                <!-- โลโก้กดกลับหน้าแรก -->
+                <a class="logo" href="../../index.html">
+                    <span class="brand-mark">
+                        <img alt="ตรามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ" src="../../assets/images/logo_kmutnb.png"/>
+                    </span>
+                    <span class="brand-name">
+                        <span class="logo-top">รับสมัครนักศึกษาใหม่ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</span>
+                        <span class="logo-bottom">KMUTNB ADMISSION</span>
+                    </span>
+                </a>
+                <nav aria-label="เมนูหลัก">
+                    <ul class="nav-menu">
+                        <li>
+                            <a href="../../index.html">หน้าแรก</a>
+                        </li>
+                        <li>
+                            <a href="../contact/contact-bangkok.html">ติดต่อ</a>
+                        </li>
+                        <li>
+                            <a href="../programs/programs.html">หลักสูตร</a>
+                        </li>
+                    </ul>
+                    <a aria-label="โปรไฟล์" class="nav-profile" href="../account/login.html">
+                        <img alt="โปรไฟล์" src="../../assets/images/profile.png"/>
+                    </a>
+                </nav>
+            </div>
+            <div class="navbar-accent-bar">
+            </div>
+        </header>
+        <!-- หน้าสรุปข้อมูลทั้งหมดก่อนผู้ใช้กดยืนยัน -->
+        <main class="application-review">
+            <section aria-labelledby="review-title" class="container review-content">
+                <h1 id="review-title">ตรวจสอบข้อมูลการสมัคร</h1>
+                <!-- ขั้นที่ 5 เป็นหน้าปัจจุบัน และทุกขั้นใช้สีแดงเพื่อบอกว่าเดินมาถึงท้ายแล้ว -->
+                <ol aria-label="ขั้นตอนสมัครเรียน" class="review-steps">
+                    <li>1 ข้อมูลส่วนตัว</li>
+                    <li>2 ข้อมูลผู้ปกครอง</li>
+                    <li>3 ข้อมูลการศึกษา</li>
+                    <li>4 หลักสูตร</li>
+                    <li aria-current="step">5 ตรวจสอบ</li>
+                </ol>
+                <!-- ข้อมูลในการ์ดเป็นตัวอย่าง UX/UI ถ้าจะเปลี่ยนข้อความแก้ตรงนี้ได้เลย -->
+                <div class="summary-list">
+                    <!-- การ์ดข้อมูลส่วนตัว ลิงก์แก้ไขจะย้อนกลับไปขั้นที่ 1 -->
+                    <section class="summary-card">
+                        <div class="summary-text">
+                            <h2>ข้อมูลส่วนตัว</h2>
+                            <p>นางสาวพรพิมล อรโสภา  •  ไทย  •  09x-xxx-xxxx</p>
+                        </div>
+                        <a href="apply-personal.html">แก้ไข</a>
+                    </section>
+                    <!-- การ์ดผู้ปกครอง ลิงก์แก้ไขจะย้อนกลับไปขั้นที่ 2 -->
+                    <section class="summary-card">
+                        <div class="summary-text">
+                            <h2>ข้อมูลผู้ปกครอง</h2>
+                            <p>นายธนกฤต บุญผาวา  •  ไทย  •  08x-xxx-xxxx</p>
+                        </div>
+                        <a href="apply-parent.html">แก้ไข</a>
+                    </section>
+                    <!-- การ์ดการศึกษา ลิงก์แก้ไขจะย้อนกลับไปขั้นที่ 3 -->
+                    <section class="summary-card">
+                        <div class="summary-text">
+                            <h2>ข้อมูลการศึกษา</h2>
+                            <p>โรงเรียนพระนครเหนือ  •  ปราจีนบุรี  •  วิทย์-คณิต  •  3.98</p>
+                        </div>
+                        <a href="apply-education.html">แก้ไข</a>
+                    </section>
+                    <!-- การ์ดหลักสูตร ลิงก์แก้ไขจะย้อนกลับไปขั้นที่ 4 -->
+                    <section class="summary-card">
+                        <div class="summary-text">
+                            <h2>หลักสูตร</h2>
+                            <p>คณะเทคโนโลยีและการจัดการอุตสาหกรรม  •  วิศวกรรมสารสนเทศและเครือข่าย  • รอบ Quota  •  โครงการยื่นคะแนน A-Level</p>
+                        </div>
+                        <a href="select-program.html">แก้ไข</a>
+                    </section>
+                </div>
+                <!-- required บังคับให้ติ๊กยืนยันก่อน ส่วน action พาไปหน้าสำเร็จ -->
+                <form action="success.html" class="review-confirmation">
+                    <label>
+                        <input name="confirm" required="" type="checkbox"/>
+                        <span>ยืนยันว่าข้อมูลถูกต้อง</span>
+                    </label>
+                    <button class="btn btn-primary" type="submit">ยืนยันการสมัคร</button>
+                </form>
+            </section>
+        </main>
+        <!-- Footer เริ่มตรงนี้ -->
+        <footer class="footer">
+            <div class="footer-content">
+                <!-- ฝั่งซ้ายเก็บที่อยู่ เบอร์โทร และอีเมล -->
+                <div class="footer-contact">
+                    <h3 class="footer-heading">ติดต่อมจพ. ปราจีน</h3>
+                    <div class="footer-info-row">
+                        <img alt="Location" class="footer-icon" src="../../assets/images/location-icon.png"/>
+                        <p>
+                            มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ วิทยาเขตปราจีนบุรี
+                            <br/>
+                            129 หมู่ที่ 21 ตำบลเนินหอม อำเภอเมือง จังหวัดปราจีนบุรี 25230
+                        </p>
+                    </div>
+                    <div class="footer-info-row">
+                        <img alt="Phone" class="footer-icon" src="../../assets/images/phone-icon.png"/>
+                        <p>เบอร์โทรศัพท์: 037-217-300   เบอร์แฟกซ์: 037-217-333</p>
+                    </div>
+                    <div class="footer-info-row">
+                        <img alt="Email" class="footer-icon" src="../../assets/images/email-icon.png"/>
+                        <p>อีเมล: contact-prachinburi@op.kmutnb.ac.th</p>
+                    </div>
+                </div>
+                <!-- รูปตึกใช้คั่นกลาง Footer -->
+                <div class="footer-building">
+                    <img alt="KMUTNB Building" src="../../assets/images/ตึกตกแต่งfooter.png"/>
+                </div>
+                <!-- ลิงก์โซเชียลอยู่ฝั่งขวา -->
+                <div class="footer-social">
+                    <p class="social-title">ติดตามเราได้ที่</p>
+                    <div class="social-icons">
+                        <a aria-label="Facebook FITM" href="https://www.facebook.com/search/top?q=fitm" rel="noopener noreferrer" target="_blank">
+                            <img alt="Facebook" src="../../assets/images/Facebook.png"/>
+                        </a>
+                        <a aria-label="TikTok FITM" href="https://www.tiktok.com/@fitm_official" rel="noopener noreferrer" target="_blank">
+                            <img alt="Tiktok" src="../../assets/images/Tiktok.png"/>
+                        </a>
+                        <a aria-label="Instagram FITM" href="https://www.instagram.com/fitm_official/" rel="noopener noreferrer" target="_blank">
+                            <img alt="Instagram" src="../../assets/images/Instagram.png"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="th">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>ข้อมูลส่วนตัว | KMUTNB Admission</title>
+        <link href="../../assets/css/shared/base.css" rel="stylesheet"/>
+        <link href="../../assets/css/shared/footer.css" rel="stylesheet"/>
+        <link href="../../assets/css/shared/navbar.css" rel="stylesheet"/>
+        <link href="../../assets/css/pages/application.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container navbar">
+                <!-- โลโก้กดกลับหน้าแรก -->
+                <a class="logo" href="../../index.html">
+                    <span class="brand-mark">
+                        <img alt="ตรามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ" src="../../assets/images/logo_kmutnb.png"/>
+                    </span>
+                    <span class="brand-name">
+                        <span class="logo-top">รับสมัครนักศึกษาใหม่ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</span>
+                        <span class="logo-bottom">KMUTNB ADMISSION</span>
+                    </span>
+                </a>
+                <nav aria-label="เมนูหลัก">
+                    <ul class="nav-menu">
+                        <li>
+                            <a href="../../index.html">หน้าแรก</a>
+                        </li>
+                        <li>
+                            <a href="../contact/contact-bangkok.html">ติดต่อ</a>
+                        </li>
+                        <li>
+                            <a href="../programs/programs.html">หลักสูตร</a>
+                        </li>
+                    </ul>
+                    <a aria-label="โปรไฟล์" class="nav-profile" href="../account/login.html">
+                        <img alt="โปรไฟล์" src="../../assets/images/profile.png"/>
+                    </a>
+                </nav>
+            </div>
+            <div class="navbar-accent-bar">
+            </div>
+        </header>
+        <!-- ===== Main ===== -->
+        <main class="personal-application">
+            <section aria-labelledby="application-title" class="container personal-content">
+                <h1 id="application-title">สมัครเรียน</h1>
+                <ol aria-label="ขั้นตอนสมัครเรียน" class="personal-steps">
+                    <li aria-current="step">1 ข้อมูลส่วนตัว</li>
+                    <li>2 ข้อมูลผู้ปกครอง</li>
+                    <li>3 ข้อมูลการศึกษา</li>
+                    <li>4 หลักสูตร</li>
+                    <li>5 ตรวจสอบ</li>
+                </ol>
+                <h2>ข้อมูลส่วนตัว</h2>
+                <form action="apply-parent.html">
+                    <!-- ชื่อภาษาไทย -->
+                    <div class="thai-name-row">
+                        <div class="personal-field">
+                            <label for="thai-prefix">คำนำหน้า</label>
+                            <select id="thai-prefix" name="thai-prefix" required="">
+                                <option disabled="" selected="" value="">เลือกคำนำหน้า</option>
+                                <option>นาย</option>
+                                <option>นางสาว</option>
+                                <option>นาง</option>
+                            </select>
+                        </div>
+                        <div class="personal-field">
+                            <label for="thai-first-name">ชื่อ</label>
+                            <input id="thai-first-name" name="thai-first-name" placeholder="กรอกข้อมูล" required="" type="text"/>
+                        </div>
+                        <div class="personal-field">
+                            <label for="thai-last-name">นามสกุล</label>
+                            <input id="thai-last-name" name="thai-last-name" placeholder="กรอกข้อมูล" required="" type="text"/>
+                        </div>
+                    </div>
+                    <!-- ชื่อภาษาอังกฤษ -->
+                    <div class="english-name-row">
+                        <div class="personal-field">
+                            <label for="english-title">Title</label>
+                            <select id="english-title" name="english-title" required="">
+                                <option disabled="" selected="" value="">Select title</option>
+                                <option>Mr.</option>
+                                <option>Miss</option>
+                                <option>Mrs.</option>
+                            </select>
+                        </div>
+                        <div class="personal-field">
+                            <label for="english-first-name">First Name</label>
+                            <input id="english-first-name" name="english-first-name" placeholder="กรอกข้อมูล" required="" type="text"/>
+                        </div>
+                        <div class="personal-field">
+                            <label for="english-last-name">Last Name</label>
+                            <input id="english-last-name" name="english-last-name" placeholder="กรอกข้อมูล" required="" type="text"/>
+                        </div>
+                    </div>
+                    <!-- ข้อมูลอื่น ๆ -->
+                    <div class="personal-form-grid">
+                        <div class="personal-field">
+                            <label for="birth-place">เพศโดยกำเนิด</label>
+                            <select id="birth-place" name="birth-place" required="">
+                                <option disabled="" selected="" value="">เลือกข้อมูล</option>
+                                <option>ชาย</option>
+                                <option>หญิง</option>
+                            </select>
+                        </div>
+                        <div class="personal-field">
+                            <label for="birth-date">วันเกิด</label>
+                            <input id="birth-date" name="birth-date" required="" type="date"/>
+                        </div>
+                        <div class="personal-field">
+                            <label for="citizen-id">เลขบัตรประจำตัวประชาชน</label>
+                            <input id="citizen-id" inputmode="numeric" maxlength="13" name="citizen-id" placeholder="กรอกข้อมูล" required="" type="text"/>
+                        </div>
+                        <div class="personal-field">
+                            <label for="current-address">ที่อยู่ปัจจุบัน</label>
+                            <input id="current-address" name="current-address" placeholder="กรอกข้อมูล" required="" type="text"/>
+                        </div>
+                        <div class="personal-field">
+                            <label for="nationality">สัญชาติ</label>
+                            <input id="nationality" name="nationality" placeholder="กรอกข้อมูล" required="" type="text"/>
+                        </div>
+                        <div class="personal-field">
+                            <label for="religion">เชื้อชาติ</label>
+                            <input id="religion" name="religion" placeholder="กรอกข้อมูล" required="" type="text"/>
+                        </div>
+                        <div class="personal-field">
+                            <label for="blood-type">กรุ๊ปเลือด</label>
+                            <select id="blood-type" name="blood-type" required="">
+                                <option disabled="" selected="" value="">เลือกกรุ๊ปเลือด</option>
+                                <option>A</option>
+                                <option>B</option>
+                                <option>AB</option>
+                                <option>O</option>
+                            </select>
+                        </div>
+                        <div class="personal-field">
+                            <label for="home-phone">โทรประจำตัว</label>
+                            <input id="home-phone" name="home-phone" placeholder="0xx-xxx-xxxx" type="tel"/>
+                        </div>
+                        <div class="personal-field">
+                            <label for="email">อีเมล</label>
+                            <input id="email" name="email" placeholder="name@example.com" required="" type="email"/>
+                        </div>
+                        <div class="personal-field">
+                            <label for="mobile-phone">เบอร์โทรศัพท์</label>
+                            <input id="mobile-phone" name="mobile-phone" placeholder="0xx-xxx-xxxx" required="" type="tel"/>
+                        </div>
+                        <div class="personal-field">
+                            <label for="military-document">แนบรูปภาพตนเอง</label>
+                            <input accept="image/*" id="military-document" name="military-document" type="file"/>
+                        </div>
+                        <div class="personal-field">
+                            <label for="id-card-copy">แนบสำเนาบัตรประชาชน</label>
+                            <input accept="image/*,.pdf" id="id-card-copy" name="id-card-copy" type="file"/>
+                        </div>
+                        <div class="personal-field">
+                            <label for="house-copy">แนบสำเนาทะเบียนบ้าน</label>
+                            <input accept="image/*,.pdf" id="house-copy" name="house-copy" type="file"/>
+                        </div>
+                        <div class="personal-field">
+                            <label for="name-change-copy">แนบใบเปลี่ยนชื่อ - สกุล (ถ้ามี)</label>
+                            <input accept="image/*,.pdf" id="name-change-copy" name="name-change-copy" type="file"/>
+                        </div>
+                    </div>
+                    <div class="personal-actions">
+                        <button class="btn btn-primary" type="submit">ถัดไป</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <!-- ===== Footer ===== -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-contact">
+                    <h3 class="footer-heading">ติดต่อมจพ. ปราจีน</h3>
+                    <div class="footer-info-row">
+                        <img alt="Location" class="footer-icon" src="../../assets/images/location-icon.png"/>
+                        <p>
+                            มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ วิทยาเขตปราจีนบุรี
+                            <br/>
+                            129 หมู่ที่ 21 ตำบลเนินหอม อำเภอเมือง จังหวัดปราจีนบุรี 25230
+                        </p>
+                    </div>
+                    <div class="footer-info-row">
+                        <img alt="Phone" class="footer-icon" src="../../assets/images/phone-icon.png"/>
+                        <p>เบอร์โทรศัพท์: 037-217-300   เบอร์แฟกซ์: 037-217-333</p>
+                    </div>
+                    <div class="footer-info-row">
+                        <img alt="Email" class="footer-icon" src="../../assets/images/email-icon.png"/>
+                        <p>อีเมล: contact-prachinburi@op.kmutnb.ac.th</p>
+                    </div>
+                </div>
+                <div class="footer-building">
+                    <img alt="KMUTNB Building" src="../../assets/images/ตึกตกแต่งfooter.png"/>
+                </div>
+                <div class="footer-social">
+                    <p class="social-title">ติดตามเราได้ที่</p>
+                    <div class="social-icons">
+                        <a aria-label="Facebook FITM" href="https://www.facebook.com/search/top?q=fitm" rel="noopener noreferrer" target="_blank">
+                            <img alt="Facebook" src="../../assets/images/Facebook.png"/>
+                        </a>
+                        <a aria-label="TikTok FITM" href="https://www.tiktok.com/@fitm_official" rel="noopener noreferrer" target="_blank">
+                            <img alt="Tiktok" src="../../assets/images/Tiktok.png"/>
+                        </a>
+                        <a aria-label="Instagram FITM" href="https://www.instagram.com/fitm_official/" rel="noopener noreferrer" target="_blank">
+                            <img alt="Instagram" src="../../assets/images/Instagram.png"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
