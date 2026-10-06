@@ -6,10 +6,10 @@
   <title>
    ข้อมูลส่วนตัว | KMUTNB Admission
   </title>
-  <link href="../../assets/css/shared/base.css?v=steps-current-6" rel="stylesheet"/>
-  <link href="../../assets/css/shared/footer.css?v=steps-current-6" rel="stylesheet"/>
-  <link href="../../assets/css/shared/navbar.css?v=steps-current-6" rel="stylesheet"/>
-  <link href="../../assets/css/pages/application.css?v=steps-current-6" rel="stylesheet"/>
+  <link href="../../assets/css/shared/base.css?v=validation-7" rel="stylesheet"/>
+  <link href="../../assets/css/shared/footer.css?v=validation-7" rel="stylesheet"/>
+  <link href="../../assets/css/shared/navbar.css?v=validation-7" rel="stylesheet"/>
+  <link href="../../assets/css/pages/application.css?v=validation-7" rel="stylesheet"/>
  </head>
  <body>
   <header class="site-header">
@@ -112,14 +112,14 @@
          ชื่อ
          *
         </label>
-        <input id="thai-first-name" placeholder="กรอกข้อมูล" required="" type="text"/>
+        <input id="thai-first-name" maxlength="100" minlength="2" pattern="(?=.*\p{L})[\p{L}\p{M}\s.\x27’\-]{2,100}" placeholder="กรอกข้อมูล" required="" title="กรอกชื่อเป็นตัวอักษรอย่างน้อย 2 ตัว ไม่ใช้ตัวเลข" type="text"/>
        </div>
        <div class="personal-field">
         <label for="thai-last-name">
          นามสกุล
          *
         </label>
-        <input id="thai-last-name" placeholder="กรอกข้อมูล" required="" type="text"/>
+        <input id="thai-last-name" maxlength="100" minlength="2" pattern="(?=.*\p{L})[\p{L}\p{M}\s.\x27’\-]{2,100}" placeholder="กรอกข้อมูล" required="" title="กรอกชื่อเป็นตัวอักษรอย่างน้อย 2 ตัว ไม่ใช้ตัวเลข" type="text"/>
        </div>
        <div class="personal-field">
         <label for="english-title">
@@ -146,14 +146,14 @@
          First Name
          *
         </label>
-        <input id="english-first-name" placeholder="กรอกข้อมูล" required="" type="text"/>
+        <input id="english-first-name" maxlength="100" minlength="2" pattern="(?=.*[A-Za-z])[A-Za-z\s.\x27\-]{2,100}" placeholder="กรอกข้อมูล" required="" title="กรอกชื่อภาษาอังกฤษอย่างน้อย 2 ตัว ไม่ใช้ตัวเลข" type="text"/>
        </div>
        <div class="personal-field">
         <label for="english-last-name">
          Last Name
          *
         </label>
-        <input id="english-last-name" placeholder="กรอกข้อมูล" required="" type="text"/>
+        <input id="english-last-name" maxlength="100" minlength="2" pattern="(?=.*[A-Za-z])[A-Za-z\s.\x27\-]{2,100}" placeholder="กรอกข้อมูล" required="" title="กรอกชื่อภาษาอังกฤษอย่างน้อย 2 ตัว ไม่ใช้ตัวเลข" type="text"/>
        </div>
        <div class="personal-field">
         <label for="birth-place">
@@ -177,35 +177,35 @@
          วันเกิด
          *
         </label>
-        <input id="birth-date" max="2026-10-06" required="" type="date"/>
+        <input id="birth-date" max="2026-10-07" min="1900-01-01" required="" type="date"/>
        </div>
        <div class="personal-field">
         <label for="citizen-id">
          เลขบัตรประจำตัวประชาชน
          *
         </label>
-        <input id="citizen-id" inputmode="numeric" maxlength="13" pattern="[0-9]{13}" placeholder="กรอกข้อมูล" required="" title="กรอกเลขบัตรประชาชน 13 หลัก" type="text"/>
+        <input id="citizen-id" inputmode="numeric" maxlength="13" minlength="13" pattern="[0-9]{13}" placeholder="กรอกข้อมูล" required="" title="เลขประจำตัวประชาชนต้องเป็นตัวเลข 13 หลัก" type="text"/>
        </div>
        <div class="personal-field">
         <label for="current-address">
          ที่อยู่ปัจจุบัน
          *
         </label>
-        <input id="current-address" placeholder="กรอกข้อมูล" required="" type="text"/>
+        <input autocomplete="street-address" id="current-address" maxlength="500" minlength="10" placeholder="กรอกข้อมูล" required="" title="กรอกที่อยู่ให้ครบ อย่างน้อย 10 ตัวอักษร" type="text"/>
        </div>
        <div class="personal-field">
         <label for="nationality">
          สัญชาติ
          *
         </label>
-        <input id="nationality" placeholder="กรอกข้อมูล" required="" type="text"/>
+        <input id="nationality" maxlength="200" minlength="2" placeholder="กรอกข้อมูล" required="" title="กรอกข้อมูลอย่างน้อย 2 ตัวอักษร" type="text"/>
        </div>
        <div class="personal-field">
         <label for="religion">
          เชื้อชาติ
          *
         </label>
-        <input id="religion" placeholder="กรอกข้อมูล" required="" type="text"/>
+        <input id="religion" maxlength="200" minlength="2" placeholder="กรอกข้อมูล" required="" title="กรอกข้อมูลอย่างน้อย 2 ตัวอักษร" type="text"/>
        </div>
        <div class="personal-field">
         <label for="blood-type">
@@ -234,21 +234,21 @@
         <label for="health-condition">
          โรคประจำตัว (ถ้ามี) *
         </label>
-        <input id="health-condition" inputmode="tel" placeholder="ไม่มี หรือระบุโรคประจำตัว" required="" type="text"/>
+        <input id="health-condition" inputmode="tel" maxlength="200" minlength="2" placeholder="ไม่มี หรือระบุโรคประจำตัว" required="" title="กรอกข้อมูลอย่างน้อย 2 ตัวอักษร" type="text"/>
        </div>
        <div class="personal-field">
         <label for="email">
          อีเมล
          *
         </label>
-        <input id="email" placeholder="name@example.com" required="" type="email"/>
+        <input autocomplete="email" id="email" maxlength="254" placeholder="name@example.com" required="" type="email"/>
        </div>
        <div class="personal-field">
         <label for="mobile-phone">
          เบอร์โทรศัพท์
          *
         </label>
-        <input id="mobile-phone" inputmode="tel" maxlength="10" pattern="0[0-9]{8,9}" placeholder="เช่น 0812345678" required="" title="กรอกเบอร์โทร 9–10 หลัก ขึ้นต้นด้วย 0 ไม่ใส่ขีดหรือเว้นวรรค" type="tel"/>
+        <input autocomplete="tel" id="mobile-phone" inputmode="tel" maxlength="10" minlength="9" pattern="0[0-9]{8,9}" placeholder="เช่น 0812345678" required="" title="เบอร์โทร 9–10 หลัก ขึ้นต้นด้วย 0 ไม่ใส่ขีดหรือเว้นวรรค" type="tel"/>
        </div>
        <div class="personal-field">
         <label for="military-document">
@@ -285,12 +285,6 @@
         <small>
          รองรับรูปภาพหรือ PDF • เก็บเฉพาะชื่อไฟล์ในโหมดสาธิต
         </small>
-       </div>
-       <div class="personal-field">
-        <label for="applicant-card">
-         แนบสำเนาบัตรประชาชนผู้สมัคร *
-        </label>
-        <input accept="image/*,.pdf" id="applicant-card" required="" type="file"/>
        </div>
       </div>
       <!-- ชื่อภาษาอังกฤษ -->

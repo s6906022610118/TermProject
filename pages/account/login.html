@@ -6,10 +6,10 @@
   <title>
    เข้าสู่ระบบ | KMUTNB Admission
   </title>
-  <link href="../../assets/css/shared/base.css?v=spacing-5" rel="stylesheet"/>
-  <link href="../../assets/css/shared/footer.css?v=spacing-5" rel="stylesheet"/>
-  <link href="../../assets/css/shared/navbar.css?v=spacing-5" rel="stylesheet"/>
-  <link href="../../assets/css/pages/login.css?v=spacing-5" rel="stylesheet"/>
+  <link href="../../assets/css/shared/base.css?v=validation-7" rel="stylesheet"/>
+  <link href="../../assets/css/shared/footer.css?v=validation-7" rel="stylesheet"/>
+  <link href="../../assets/css/shared/navbar.css?v=validation-7" rel="stylesheet"/>
+  <link href="../../assets/css/pages/login.css?v=validation-7" rel="stylesheet"/>
  </head>
  <body>
   <header class="site-header">
@@ -73,20 +73,17 @@
        <label for="email">
         อีเมล
        </label>
-       <input autocomplete="email" id="email" maxlength="200" placeholder="name@example.com" required="" type="email"/>
+       <input autocomplete="email" id="email" maxlength="254" placeholder="name@example.com" required="" type="email"/>
       </div>
       <div class="form-group">
        <label for="password">
         รหัสผ่าน
        </label>
-       <input autocapitalize="off" autocomplete="current-password" autocorrect="off" class="masked-password" id="password" minlength="8" placeholder="กรอกรหัสผ่าน" required="" spellcheck="false" type="text"/>
+       <input aria-describedby="password-hint" autocapitalize="off" autocomplete="current-password" autocorrect="off" id="password" maxlength="128" minlength="10" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[^\p{L}\p{N}\s])\S{10,128}" placeholder="อย่างน้อย 10 ตัว: A–Z, a–z, 0–9 และอักขระพิเศษ" required="" spellcheck="false" title="รหัสผ่าน 10–128 ตัว ต้องมีตัวใหญ่ ตัวเล็ก ตัวเลข และอักขระพิเศษ ห้ามเว้นวรรค" type="password"/>
+       <small class="field-hint" id="password-hint">
+        10–128 ตัว รวม A–Z, a–z, ตัวเลข และอักขระพิเศษ เช่น ! @ # ห้ามเว้นวรรค
+       </small>
       </div>
-      <label class="checkbox-line password-toggle">
-       <input id="show-password" type="checkbox"/>
-       <span>
-        แสดงรหัสผ่าน
-       </span>
-      </label>
       <button class="btn btn-primary account-submit" type="submit">
        เข้าสู่ระบบ
       </button>

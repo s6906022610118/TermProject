@@ -22,3 +22,4 @@ body:has(.login-section) { background: #fff; }
 form:has(#show-password:checked) .masked-password { -webkit-text-security: none; }
 .password-toggle { font-size: 13px; margin: 20px 0 16px; }
 .password-toggle input { width: 13px; height: 13px; margin-top: 3px; }
+.field-hint { display: block; margin-top: 6px; color: var(--text-light); font-size: 12px; line-height: 1.5; }
