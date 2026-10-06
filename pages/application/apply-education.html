@@ -131,7 +131,7 @@
          เกรดเฉลี่ยสะสม (GPAX)
          *
         </label>
-        <input id="gpax" inputmode="decimal" max="4.00" min="2.50" placeholder="2.50–4.00" required="" step="0.01" title="เกรดเฉลี่ยต้องอยู่ระหว่าง 2.50 ถึง 4.00" type="number"/>
+        <input id="gpax" inputmode="decimal" maxlength="4" pattern="(?:2\.[5-9][0-9]?|3(?:\.[0-9]{1,2})?|4(?:\.0{1,2})?)" placeholder="เช่น 2.50 หรือ 3.98" required="" title="กรอกเกรด 2.50–4.00 ทศนิยมไม่เกิน 2 ตำแหน่ง ไม่ใส่ศูนย์นำหน้า" type="text"/>
        </div>
        <div class="personal-field">
         <label for="transcript">
