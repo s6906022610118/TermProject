@@ -1,149 +1,18 @@
-.course-detail-page {
-    font-family: "Leelawadee UI", Tahoma, Arial, sans-serif;
-    font-size: 12.5px;
-    line-height: 1.2;
-    background: white;
-    min-height: calc(100vh / 1.2);
-    min-height: calc(100dvh / 1.2);
-    display: flex;
-    flex-direction: column;
-}
-
-.course-detail-page > .site-header,
-.course-detail-page > .footer {
-    flex-shrink: 0;
-}
-
-.course-detail-page .course-container {
-    width: 89%;
-    max-width: 1120px;
-    min-height: 0;
-    margin: 0 auto;
-    padding: 30px 0 48px;
-    flex: 1;
-}
-
-.course-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 24px;
-}
-
-.course-heading > div {
-    min-width: 0;
-}
-
-.degree-name {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.course-heading h1 {
-    font-size: 28px;
-    line-height: 1.3;
-    margin: 4px 0 8px;
-}
-
-.course-detail-page .course-apply {
-    min-width: 116px;
-    padding: 10px 20px;
-    margin: 7px 10px 0 0;
-    border-radius: 5px;
-    font-size: 13px;
-    text-align: center;
-    flex-shrink: 0;
-    transition: none;
-}
-
-.course-about {
-    margin: 28px 0 18px;
-}
-
-.course-about h2 {
-    font-size: 17px;
-    margin-bottom: 8px;
-}
-
-.course-columns {
-    display: grid;
-    grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
-    gap: 32px;
-    align-items: stretch;
-}
-
-.course-facts,
-.course-careers {
-    border: 1.5px solid #b53622;
-    border-radius: 6px;
-    padding: 12px 14px;
-    font-size: 12px;
-    line-height: 1.25;
-}
-
-.course-columns > section {
-    min-width: 0;
-    min-height: 174px;
-}
-
-.course-facts {
-    background: #fff0da;
-}
-
-.course-facts h2,
-.course-careers h2 {
-    font-size: inherit;
-    line-height: inherit;
-}
-
-.course-facts h2:not(:first-child) {
-    margin-top: 14px;
-}
-
-.course-facts p {
-    text-indent: 18px;
-}
-
-.course-careers {
-    padding: 24px 17px;
-    background: white;
-}
-
-.course-careers ul {
-    padding-left: 20px;
-}
-
-@media (max-width: 1000px) {
-    .course-columns {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .course-columns > section {
-        min-height: 0;
-    }
-}
-
-@media (max-width: 600px) {
-    .course-heading {
-        flex-direction: column;
-        gap: 14px;
-    }
-
-    .course-heading h1 {
-        font-size: 26px;
-    }
-
-    .course-detail-page .course-apply {
-        margin: 0;
-    }
-
-    .course-about {
-        margin-top: 26px;
-    }
-
-    .course-facts,
-    .course-careers {
-        padding: 16px;
-    }
-}
+.course-container { width: calc(100% - 48px); max-width: 1120px; margin-inline: auto; padding: 40px 0; }
+.course-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
+.course-heading > div { min-width: 0; }
+.course-heading h1 { margin-bottom: 10px; }
+.course-heading p { color: var(--text-light); font-size: 16px; }
+.course-heading .degree-name { font-size: 14px; margin-bottom: 6px; }
+.course-apply { min-width: 150px; flex-shrink: 0; }
+.course-photo { width: 100%; height: 230px; object-fit: cover; margin-top: 24px; border-radius: 6px; }
+.course-about { margin: 24px 0; }
+.course-about h2 { margin-bottom: 12px; }
+.course-columns { display: grid; grid-template-columns: minmax(0,700px) minmax(0,396px); gap: 24px; align-items: start; }
+.course-facts,.course-careers { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 28px; font-size: 16px; }
+.course-facts h2,.course-careers h2 { font-size: 18px; margin-bottom: 12px; }
+.course-facts h2:not(:first-child) { margin-top: 24px; }
+.course-careers ul { padding-left: 20px; }
+.course-careers li { margin-bottom: 8px; }
+@media(max-width:800px) { .course-columns { grid-template-columns: 1fr; } }
+@media(max-width:600px) { .course-container { width: calc(100% - 32px); padding: 24px 0; } .course-heading { flex-direction: column; } .course-apply { width: 100%; } .course-facts,.course-careers { padding: 20px; } }

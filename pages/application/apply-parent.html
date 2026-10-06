@@ -1,301 +1,441 @@
 <!DOCTYPE html>
 <html lang="th">
-    <head>
-        <meta charset="utf-8"/>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-        <title>ข้อมูลผู้ปกครอง | KMUTNB Admission</title>
-        <link href="../../assets/css/shared/base.css" rel="stylesheet"/>
-        <link href="../../assets/css/shared/footer.css" rel="stylesheet"/>
-        <link href="../../assets/css/shared/navbar.css" rel="stylesheet"/>
-        <link href="../../assets/css/pages/application.css" rel="stylesheet"/>
-    </head>
-    <body>
-        <header class="site-header">
-            <div class="container navbar">
-                <!-- โลโก้กดกลับหน้าแรก -->
-                <a class="logo" href="../../index.html">
-                    <span class="brand-mark">
-                        <img alt="ตรามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ" src="../../assets/images/logo_kmutnb.png"/>
-                    </span>
-                    <span class="brand-name">
-                        <span class="logo-top">รับสมัครนักศึกษาใหม่ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</span>
-                        <span class="logo-bottom">KMUTNB ADMISSION</span>
-                    </span>
-                </a>
-                <nav aria-label="เมนูหลัก">
-                    <ul class="nav-menu">
-                        <li>
-                            <a href="../../index.html">หน้าแรก</a>
-                        </li>
-                        <li>
-                            <a href="../contact/contact-bangkok.html">ติดต่อ</a>
-                        </li>
-                        <li>
-                            <a href="../programs/programs.html">หลักสูตร</a>
-                        </li>
-                    </ul>
-                    <a aria-label="โปรไฟล์" class="nav-profile" href="../account/login.html">
-                        <img alt="โปรไฟล์" src="../../assets/images/profile.png"/>
-                    </a>
-                </nav>
-            </div>
-            <div class="navbar-accent-bar">
-            </div>
-        </header>
-        <!-- ===== Main ===== -->
-        <main class="personal-application parent-application">
-            <section aria-labelledby="parent-page-title" class="container personal-content">
-                <h1 id="parent-page-title">สมัครเรียน</h1>
-                <ol aria-label="ขั้นตอนสมัครเรียน" class="personal-steps">
-                    <li aria-current="step">1 ข้อมูลส่วนตัว</li>
-                    <li aria-current="step">2 ข้อมูลผู้ปกครอง</li>
-                    <li>3 ข้อมูลการศึกษา</li>
-                    <li>4 หลักสูตร</li>
-                    <li>5 ตรวจสอบ</li>
-                </ol>
-                <form action="apply-education.html">
-                    <!-- ข้อมูลบิดา -->
-                    <fieldset class="parent-section">
-                        <legend>
-                            ข้อมูลบิดา
-                        </legend>
-                        <div class="life-status">
-                            <p>สถานะการมีชีวิต</p>
-                            <div class="radio-options">
-                                <label>
-                                    <input name="father-status" type="radio" value="alive"/>
-                                    มีชีวิตอยู่
-                                </label>
-                                <label>
-                                    <input name="father-status" type="radio" value="deceased"/>
-                                    เสียชีวิตแล้ว
-                                </label>
-                                <label>
-                                    <input name="father-status" type="radio" value="unknown"/>
-                                    ไม่ทราบ
-                                </label>
-                            </div>
-                        </div>
-                        <div class="parent-name-row">
-                            <div class="personal-field">
-                                <label for="father-prefix">คำนำหน้า</label>
-                                <select id="father-prefix" name="father-prefix">
-                                    <option disabled="" selected="" value="">เลือก</option>
-                                    <option>นาย</option>
-                                    <option>อื่น ๆ</option>
-                                </select>
-                            </div>
-                            <div class="personal-field">
-                                <label for="father-first-name">ชื่อ</label>
-                                <input id="father-first-name" name="father-first-name" placeholder="กรอกข้อมูล" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="father-last-name">นามสกุล</label>
-                                <input id="father-last-name" name="father-last-name" placeholder="กรอกข้อมูล" type="text"/>
-                            </div>
-                        </div>
-                        <div class="parent-grid">
-                            <div class="personal-field">
-                                <label for="father-id">เลขบัตรประจำตัวประชาชน</label>
-                                <input id="father-id" inputmode="numeric" maxlength="13" name="father-id" placeholder="กรอกข้อมูล" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="father-address">ที่อยู่ปัจจุบัน</label>
-                                <input id="father-address" name="father-address" placeholder="กรอกข้อมูล" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="father-nationality">สัญชาติ</label>
-                                <input id="father-nationality" name="father-nationality" placeholder="กรอกข้อมูล" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="father-race">เชื้อชาติ</label>
-                                <input id="father-race" name="father-race" placeholder="กรอกข้อมูล" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="father-phone">เบอร์โทรศัพท์</label>
-                                <input id="father-phone" name="father-phone" placeholder="0xx-xxx-xxxx" type="tel"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="father-card">แนบสำเนาบัตรประชาชน</label>
-                                <input accept="image/*,.pdf" id="father-card" name="father-card" type="file"/>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <!-- ข้อมูลมารดา -->
-                    <fieldset class="parent-section">
-                        <legend>
-                            ข้อมูลมารดา
-                        </legend>
-                        <div class="life-status">
-                            <p>สถานะการมีชีวิต</p>
-                            <div class="radio-options">
-                                <label>
-                                    <input name="mother-status" type="radio" value="alive"/>
-                                    มีชีวิตอยู่
-                                </label>
-                                <label>
-                                    <input name="mother-status" type="radio" value="deceased"/>
-                                    เสียชีวิตแล้ว
-                                </label>
-                                <label>
-                                    <input name="mother-status" type="radio" value="unknown"/>
-                                    ไม่ทราบ
-                                </label>
-                            </div>
-                        </div>
-                        <div class="parent-name-row">
-                            <div class="personal-field">
-                                <label for="mother-prefix">คำนำหน้า</label>
-                                <select id="mother-prefix" name="mother-prefix">
-                                    <option disabled="" selected="" value="">เลือก</option>
-                                    <option>นาง</option>
-                                    <option>นางสาว</option>
-                                    <option>อื่น ๆ</option>
-                                </select>
-                            </div>
-                            <div class="personal-field">
-                                <label for="mother-first-name">ชื่อ</label>
-                                <input id="mother-first-name" name="mother-first-name" placeholder="กรอกข้อมูล" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="mother-last-name">นามสกุล</label>
-                                <input id="mother-last-name" name="mother-last-name" placeholder="กรอกข้อมูล" type="text"/>
-                            </div>
-                        </div>
-                        <div class="parent-grid">
-                            <div class="personal-field">
-                                <label for="mother-id">เลขบัตรประจำตัวประชาชน</label>
-                                <input id="mother-id" inputmode="numeric" maxlength="13" name="mother-id" placeholder="กรอกข้อมูล" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="mother-address">ที่อยู่ปัจจุบัน</label>
-                                <input id="mother-address" name="mother-address" placeholder="กรอกข้อมูล" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="mother-nationality">สัญชาติ</label>
-                                <input id="mother-nationality" name="mother-nationality" placeholder="กรอกข้อมูล" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="mother-race">เชื้อชาติ</label>
-                                <input id="mother-race" name="mother-race" placeholder="กรอกข้อมูล" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="mother-phone">เบอร์โทรศัพท์</label>
-                                <input id="mother-phone" name="mother-phone" placeholder="0xx-xxx-xxxx" type="tel"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="mother-card">แนบสำเนาบัตรประชาชน</label>
-                                <input accept="image/*,.pdf" id="mother-card" name="mother-card" type="file"/>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <!-- ข้อมูลผู้ปกครอง -->
-                    <fieldset class="parent-section guardian-section">
-                        <legend>
-                            ข้อมูลผู้ปกครอง
-                        </legend>
-                        <div class="parent-name-row">
-                            <div class="personal-field">
-                                <label for="guardian-prefix">คำนำหน้า</label>
-                                <select id="guardian-prefix" name="guardian-prefix" required="">
-                                    <option disabled="" selected="" value="">เลือก</option>
-                                    <option>นาย</option>
-                                    <option>นาง</option>
-                                    <option>นางสาว</option>
-                                    <option>อื่น ๆ</option>
-                                </select>
-                            </div>
-                            <div class="personal-field">
-                                <label for="guardian-first-name">ชื่อ</label>
-                                <input id="guardian-first-name" name="guardian-first-name" placeholder="กรอกข้อมูล" required="" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="guardian-last-name">นามสกุล</label>
-                                <input id="guardian-last-name" name="guardian-last-name" placeholder="กรอกข้อมูล" required="" type="text"/>
-                            </div>
-                        </div>
-                        <div class="parent-grid">
-                            <div class="personal-field">
-                                <label for="guardian-id">เลขบัตรประจำตัวประชาชน</label>
-                                <input id="guardian-id" inputmode="numeric" maxlength="13" name="guardian-id" placeholder="กรอกข้อมูล" required="" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="guardian-address">ที่อยู่ปัจจุบัน</label>
-                                <input id="guardian-address" name="guardian-address" placeholder="กรอกข้อมูล" required="" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="guardian-nationality">สัญชาติ</label>
-                                <input id="guardian-nationality" name="guardian-nationality" placeholder="กรอกข้อมูล" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="guardian-race">เชื้อชาติ</label>
-                                <input id="guardian-race" name="guardian-race" placeholder="กรอกข้อมูล" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="guardian-email">อีเมล</label>
-                                <input id="guardian-email" name="guardian-email" placeholder="name@example.com" type="email"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="guardian-phone">เบอร์โทรศัพท์</label>
-                                <input id="guardian-phone" name="guardian-phone" placeholder="0xx-xxx-xxxx" required="" type="tel"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="guardian-relation">ความสัมพันธ์กับนักเรียน</label>
-                                <input id="guardian-relation" name="guardian-relation" placeholder="กรอกข้อมูล" required="" type="text"/>
-                            </div>
-                            <div class="personal-field">
-                                <label for="guardian-card">แนบสำเนาบัตรประชาชน</label>
-                                <input accept="image/*,.pdf" id="guardian-card" name="guardian-card" type="file"/>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <div class="parent-actions">
-                        <a class="btn previous-button" href="apply-personal.html">ย้อนกลับ</a>
-                        <button class="btn btn-primary" type="submit">ถัดไป</button>
-                    </div>
-                </form>
-            </section>
-        </main>
-        <!-- ===== Footer ===== -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-contact">
-                    <h3 class="footer-heading">ติดต่อมจพ. ปราจีน</h3>
-                    <div class="footer-info-row">
-                        <img alt="Location" class="footer-icon" src="../../assets/images/location-icon.png"/>
-                        <p>
-                            มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ วิทยาเขตปราจีนบุรี
-                            <br/>
-                            129 หมู่ที่ 21 ตำบลเนินหอม อำเภอเมือง จังหวัดปราจีนบุรี 25230
-                        </p>
-                    </div>
-                    <div class="footer-info-row">
-                        <img alt="Phone" class="footer-icon" src="../../assets/images/phone-icon.png"/>
-                        <p>เบอร์โทรศัพท์: 037-217-300   เบอร์แฟกซ์: 037-217-333</p>
-                    </div>
-                    <div class="footer-info-row">
-                        <img alt="Email" class="footer-icon" src="../../assets/images/email-icon.png"/>
-                        <p>อีเมล: contact-prachinburi@op.kmutnb.ac.th</p>
-                    </div>
-                </div>
-                <div class="footer-building">
-                    <img alt="KMUTNB Building" src="../../assets/images/ตึกตกแต่งfooter.png"/>
-                </div>
-                <div class="footer-social">
-                    <p class="social-title">ติดตามเราได้ที่</p>
-                    <div class="social-icons">
-                        <a aria-label="Facebook FITM" href="https://www.facebook.com/search/top?q=fitm" rel="noopener noreferrer" target="_blank">
-                            <img alt="Facebook" src="../../assets/images/Facebook.png"/>
-                        </a>
-                        <a aria-label="TikTok FITM" href="https://www.tiktok.com/@fitm_official" rel="noopener noreferrer" target="_blank">
-                            <img alt="Tiktok" src="../../assets/images/Tiktok.png"/>
-                        </a>
-                        <a aria-label="Instagram FITM" href="https://www.instagram.com/fitm_official/" rel="noopener noreferrer" target="_blank">
-                            <img alt="Instagram" src="../../assets/images/Instagram.png"/>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   ข้อมูลผู้ปกครอง | KMUTNB Admission
+  </title>
+  <link href="../../assets/css/shared/base.css" rel="stylesheet"/>
+  <link href="../../assets/css/shared/footer.css" rel="stylesheet"/>
+  <link href="../../assets/css/shared/navbar.css" rel="stylesheet"/>
+  <link href="../../assets/css/pages/application.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="site-header">
+   <div class="container navbar">
+    <!-- โลโก้กดกลับหน้าแรก -->
+    <a class="logo" href="../../index.html">
+     <span class="brand-mark">
+      <img alt="ตรามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ" src="../../assets/images/logo_kmutnb.png"/>
+     </span>
+     <span class="brand-name">
+      <span class="logo-top">
+       ระบบรับสมัครนักศึกษาใหม่
+      </span>
+      <span class="logo-bottom">
+       มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+      </span>
+     </span>
+    </a>
+    <nav aria-label="เมนูหลัก">
+     <ul class="nav-menu">
+      <li>
+       <a href="../../index.html">
+        หน้าแรก
+       </a>
+      </li>
+      <li>
+       <a href="../programs/programs.html">
+        หลักสูตร
+       </a>
+      </li>
+      <li>
+       <a href="../contact/contact-bangkok.html">
+        ติดต่อ
+       </a>
+      </li>
+     </ul>
+     <a aria-label="โปรไฟล์" class="nav-profile" href="../account/login.html">
+      <img alt="โปรไฟล์" src="../../assets/images/profile.png"/>
+     </a>
+     <a class="logout-link" href="../account/login.html">
+      ออกจากระบบ
+     </a>
+    </nav>
+   </div>
+   <div class="navbar-accent-bar">
+   </div>
+  </header>
+  <!-- ===== Main ===== -->
+  <main class="personal-application parent-application">
+   <section aria-labelledby="parent-page-title" class="container personal-content">
+    <h1 id="parent-page-title">
+     สมัครเรียน
+    </h1>
+    <p class="page-description">
+     กรอกข้อมูลตามขั้นตอน ตรวจสอบให้ครบก่อนยืนยัน
+    </p>
+    <ol aria-label="ขั้นตอนสมัครเรียน" class="personal-steps">
+     <li aria-current="step">
+      1 ข้อมูลส่วนตัว
+     </li>
+     <li aria-current="step">
+      2 ข้อมูลผู้ปกครอง
+     </li>
+     <li>
+      3 ข้อมูลการศึกษา
+     </li>
+     <li>
+      4 หลักสูตร
+     </li>
+     <li>
+      5 ตรวจสอบ
+     </li>
+    </ol>
+    <form action="apply-education.html" method="get">
+     <div class="form-panel">
+      <!-- ข้อมูลบิดา -->
+      <fieldset class="parent-section">
+       <legend>
+        ข้อมูลบิดา
+       </legend>
+       <div class="life-status">
+        <p>
+         สถานะการมีชีวิต
+        </p>
+        <div class="radio-options">
+         <label>
+          <input name="father-status" type="radio" value="alive"/>
+          มีชีวิตอยู่
+         </label>
+         <label>
+          <input name="father-status" type="radio" value="deceased"/>
+          เสียชีวิตแล้ว
+         </label>
+         <label>
+          <input name="father-status" type="radio" value="unknown"/>
+          ไม่ทราบ
+         </label>
+        </div>
+       </div>
+       <div class="parent-grid">
+        <div class="personal-field">
+         <label for="father-prefix">
+          คำนำหน้า
+         </label>
+         <select id="father-prefix">
+          <option disabled="" selected="" value="">
+           เลือก
+          </option>
+          <option>
+           นาย
+          </option>
+          <option>
+           อื่น ๆ
+          </option>
+         </select>
+        </div>
+        <div class="personal-field">
+         <label for="father-first-name">
+          ชื่อ
+         </label>
+         <input id="father-first-name" placeholder="กรอกข้อมูล" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="father-last-name">
+          นามสกุล
+         </label>
+         <input id="father-last-name" placeholder="กรอกข้อมูล" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="father-id">
+          เลขบัตรประจำตัวประชาชน
+         </label>
+         <input id="father-id" inputmode="numeric" maxlength="13" placeholder="กรอกข้อมูล" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="father-address">
+          ที่อยู่ปัจจุบัน
+         </label>
+         <input id="father-address" placeholder="กรอกข้อมูล" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="father-nationality">
+          สัญชาติ
+         </label>
+         <input id="father-nationality" placeholder="กรอกข้อมูล" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="father-race">
+          เชื้อชาติ
+         </label>
+         <input id="father-race" placeholder="กรอกข้อมูล" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="father-phone">
+          เบอร์โทรศัพท์
+         </label>
+         <input id="father-phone" inputmode="tel" placeholder="0xx-xxx-xxxx" type="tel"/>
+        </div>
+        <div class="personal-field">
+         <label for="father-card">
+          แนบสำเนาบัตรประชาชน
+         </label>
+         <input accept="image/*,.pdf" id="father-card" type="file"/>
+         <small>
+          รองรับรูปภาพหรือ PDF • เก็บเฉพาะชื่อไฟล์ในโหมดสาธิต
+         </small>
+        </div>
+       </div>
+      </fieldset>
+      <!-- ข้อมูลมารดา -->
+      <fieldset class="parent-section">
+       <legend>
+        ข้อมูลมารดา
+       </legend>
+       <div class="life-status">
+        <p>
+         สถานะการมีชีวิต
+        </p>
+        <div class="radio-options">
+         <label>
+          <input name="mother-status" type="radio" value="alive"/>
+          มีชีวิตอยู่
+         </label>
+         <label>
+          <input name="mother-status" type="radio" value="deceased"/>
+          เสียชีวิตแล้ว
+         </label>
+         <label>
+          <input name="mother-status" type="radio" value="unknown"/>
+          ไม่ทราบ
+         </label>
+        </div>
+       </div>
+       <div class="parent-grid">
+        <div class="personal-field">
+         <label for="mother-prefix">
+          คำนำหน้า
+         </label>
+         <select id="mother-prefix">
+          <option disabled="" selected="" value="">
+           เลือก
+          </option>
+          <option>
+           นาง
+          </option>
+          <option>
+           นางสาว
+          </option>
+          <option>
+           อื่น ๆ
+          </option>
+         </select>
+        </div>
+        <div class="personal-field">
+         <label for="mother-first-name">
+          ชื่อ
+         </label>
+         <input id="mother-first-name" placeholder="กรอกข้อมูล" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="mother-last-name">
+          นามสกุล
+         </label>
+         <input id="mother-last-name" placeholder="กรอกข้อมูล" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="mother-id">
+          เลขบัตรประจำตัวประชาชน
+         </label>
+         <input id="mother-id" inputmode="numeric" maxlength="13" placeholder="กรอกข้อมูล" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="mother-address">
+          ที่อยู่ปัจจุบัน
+         </label>
+         <input id="mother-address" placeholder="กรอกข้อมูล" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="mother-nationality">
+          สัญชาติ
+         </label>
+         <input id="mother-nationality" placeholder="กรอกข้อมูล" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="mother-race">
+          เชื้อชาติ
+         </label>
+         <input id="mother-race" placeholder="กรอกข้อมูล" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="mother-phone">
+          เบอร์โทรศัพท์
+         </label>
+         <input id="mother-phone" inputmode="tel" placeholder="0xx-xxx-xxxx" type="tel"/>
+        </div>
+        <div class="personal-field">
+         <label for="mother-card">
+          แนบสำเนาบัตรประชาชน
+         </label>
+         <input accept="image/*,.pdf" id="mother-card" type="file"/>
+         <small>
+          รองรับรูปภาพหรือ PDF • เก็บเฉพาะชื่อไฟล์ในโหมดสาธิต
+         </small>
+        </div>
+       </div>
+      </fieldset>
+      <!-- ข้อมูลผู้ปกครอง -->
+      <fieldset class="parent-section guardian-section">
+       <legend>
+        ข้อมูลผู้ปกครอง
+       </legend>
+       <div class="parent-grid">
+        <div class="personal-field">
+         <label for="guardian-prefix">
+          คำนำหน้า
+          *
+         </label>
+         <select id="guardian-prefix" required="">
+          <option disabled="" selected="" value="">
+           เลือก
+          </option>
+          <option>
+           นาย
+          </option>
+          <option>
+           นาง
+          </option>
+          <option>
+           นางสาว
+          </option>
+          <option>
+           อื่น ๆ
+          </option>
+         </select>
+        </div>
+        <div class="personal-field">
+         <label for="guardian-first-name">
+          ชื่อ
+          *
+         </label>
+         <input id="guardian-first-name" placeholder="กรอกข้อมูล" required="" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="guardian-last-name">
+          นามสกุล
+          *
+         </label>
+         <input id="guardian-last-name" placeholder="กรอกข้อมูล" required="" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="guardian-id">
+          เลขบัตรประจำตัวประชาชน
+          *
+         </label>
+         <input id="guardian-id" inputmode="numeric" maxlength="13" placeholder="กรอกข้อมูล" required="" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="guardian-address">
+          ที่อยู่ปัจจุบัน
+          *
+         </label>
+         <input id="guardian-address" placeholder="กรอกข้อมูล" required="" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="guardian-nationality">
+          สัญชาติ
+         </label>
+         <input id="guardian-nationality" placeholder="กรอกข้อมูล" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="guardian-race">
+          เชื้อชาติ
+         </label>
+         <input id="guardian-race" placeholder="กรอกข้อมูล" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="guardian-email">
+          อีเมล
+         </label>
+         <input id="guardian-email" placeholder="name@example.com" type="email"/>
+        </div>
+        <div class="personal-field">
+         <label for="guardian-phone">
+          เบอร์โทรศัพท์
+          *
+         </label>
+         <input id="guardian-phone" inputmode="tel" placeholder="0xx-xxx-xxxx" required="" type="tel"/>
+        </div>
+        <div class="personal-field">
+         <label for="guardian-relation">
+          ความสัมพันธ์กับนักเรียน
+          *
+         </label>
+         <input id="guardian-relation" placeholder="กรอกข้อมูล" required="" type="text"/>
+        </div>
+        <div class="personal-field">
+         <label for="guardian-card">
+          แนบสำเนาบัตรประชาชน
+         </label>
+         <input accept="image/*,.pdf" id="guardian-card" type="file"/>
+         <small>
+          รองรับรูปภาพหรือ PDF • เก็บเฉพาะชื่อไฟล์ในโหมดสาธิต
+         </small>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+     <div class="parent-actions">
+      <a class="btn btn-outline previous-button" href="apply-personal.html">
+       ย้อนกลับ
+      </a>
+      <button class="btn btn-primary" type="submit">
+       บันทึกและถัดไป
+      </button>
+     </div>
+    </form>
+   </section>
+  </main>
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+   <div class="footer-content">
+    <div class="footer-contact">
+     <h3 class="footer-heading">
+      ติดต่อ มจพ. วิทยาเขตปราจีนบุรี
+     </h3>
+     <div class="footer-info-row">
+      <img alt="Location" class="footer-icon" src="../../assets/images/location-icon.png"/>
+      <p>
+       มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ วิทยาเขตปราจีนบุรี
+       <br/>
+       129 หมู่ที่ 21 ตำบลเนินหอม อำเภอเมือง จังหวัดปราจีนบุรี 25230
+      </p>
+     </div>
+     <div class="footer-info-row">
+      <img alt="Phone" class="footer-icon" src="../../assets/images/phone-icon.png"/>
+      <p>
+       เบอร์โทรศัพท์: 037-217-300   เบอร์แฟกซ์: 037-217-333
+      </p>
+     </div>
+     <div class="footer-info-row">
+      <img alt="Email" class="footer-icon" src="../../assets/images/email-icon.png"/>
+      <p>
+       อีเมล: contact-prachinburi@op.kmutnb.ac.th
+      </p>
+     </div>
+    </div>
+    <div class="footer-building">
+     <img alt="KMUTNB Building" src="../../assets/images/ตึกตกแต่งfooter.png"/>
+    </div>
+    <div class="footer-social">
+     <p class="social-title">
+      ติดตามเราได้ที่
+     </p>
+     <div class="social-icons">
+      <a aria-label="Facebook FITM" href="https://www.facebook.com/search/top?q=fitm" rel="noopener noreferrer" target="_blank">
+       <img alt="Facebook" src="../../assets/images/Facebook.png"/>
+      </a>
+      <a aria-label="TikTok FITM" href="https://www.tiktok.com/@fitm_official" rel="noopener noreferrer" target="_blank">
+       <img alt="Tiktok" src="../../assets/images/Tiktok.png"/>
+      </a>
+      <a aria-label="Instagram FITM" href="https://www.instagram.com/fitm_official/" rel="noopener noreferrer" target="_blank">
+       <img alt="Instagram" src="../../assets/images/Instagram.png"/>
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+ </body>
 </html>

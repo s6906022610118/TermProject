@@ -4,14 +4,14 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ 2 ปี ต่อเนื่อง (ITT) | KMUTNB Admission
+   สร้างบัญชีผู้สมัคร | KMUTNB Admission
   </title>
   <link href="../../assets/css/shared/base.css" rel="stylesheet"/>
   <link href="../../assets/css/shared/footer.css" rel="stylesheet"/>
-  <link href="../../assets/css/pages/program-detail.css" rel="stylesheet"/>
   <link href="../../assets/css/shared/navbar.css" rel="stylesheet"/>
+  <link href="../../assets/css/pages/login.css" rel="stylesheet"/>
  </head>
- <body class="course-detail-page">
+ <body>
   <header class="site-header">
    <div class="container navbar">
     <!-- โลโก้กดกลับหน้าแรก -->
@@ -36,7 +36,7 @@
        </a>
       </li>
       <li>
-       <a aria-current="page" href="programs.html">
+       <a href="../programs/programs.html">
         หลักสูตร
        </a>
       </li>
@@ -46,7 +46,7 @@
        </a>
       </li>
       <li>
-       <a href="../account/login.html">
+       <a aria-current="page" href="login.html">
         เข้าสู่ระบบ
        </a>
       </li>
@@ -56,82 +56,68 @@
    <div class="navbar-accent-bar">
    </div>
   </header>
-  <!-- ===== Main ===== -->
-  <main class="course-container">
-   <article aria-labelledby="itt-title" id="itt">
-    <a class="breadcrumb" href="programs.html">
-     หลักสูตร / ดูหลักสูตรทั้งหมด
-    </a>
-    <div class="course-heading">
-     <div>
-      <p class="degree-name">
-       หลักสูตรวิทยาศาสตรบัณฑิต (วท.บ.)
-      </p>
-      <h1 id="itt-title">
-       เทคโนโลยีสารสนเทศ (ITT)
-      </h1>
-      <p>
-       คณะเทคโนโลยีและการจัดการอุตสาหกรรม • ปริญญาตรี 2 ปี (ต่อเนื่อง)
-      </p>
-     </div>
-     <a class="btn btn-primary course-apply" href="../account/register.html">
-      สมัครเรียน
-     </a>
-    </div>
-    <img alt="นักศึกษาและบรรยากาศหลักสูตร ITT" class="course-photo" src="../../assets/images/ITT.jpg"/>
-    <section class="course-about">
+  <!-- ===== Login ===== -->
+  <main class="login-section">
+   <div class="account-panel">
+    <aside class="account-intro">
+     <img alt="บรรยากาศมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ" src="../../assets/images/pic1.jpg"/>
      <h2>
-      เกี่ยวกับหลักสูตร
+      เริ่มต้นเส้นทางการเรียนของคุณ
      </h2>
      <p>
-      ศึกษาเกี่ยวกับการประยุกต์ใช้เทคโนโลยีสารสนเทศ การพัฒนาซอฟต์แวร์ และการบริหารจัดการระบบสารสนเทศ
+      สมัครบัญชี กรอกข้อมูล และตรวจสอบใบสมัคร
+      <br/>
+      ได้ในที่เดียว
      </p>
+    </aside>
+    <section class="account-form">
+     <img alt="บัญชีผู้สมัคร" class="account-profile" src="../../assets/images/profile.png"/>
+     <h1>
+      สร้างบัญชีผู้สมัคร
+     </h1>
+     <p class="page-description">
+      ลงทะเบียนก่อนเริ่มกรอกใบสมัครเรียน
+     </p>
+     <form action="login.html" method="get">
+      <div class="form-group">
+       <label for="full-name">
+        ชื่อ–นามสกุล *
+       </label>
+       <input autocomplete="name" id="full-name" maxlength="100" placeholder="กรอกชื่อและนามสกุล" required=""/>
+      </div>
+      <div class="form-group">
+       <label for="email">
+        อีเมล *
+       </label>
+       <input autocomplete="email" id="email" maxlength="200" placeholder="name@example.com" required="" type="email"/>
+      </div>
+      <div class="form-group">
+       <label for="password">
+        รหัสผ่าน *
+       </label>
+       <input autocomplete="new-password" id="password" minlength="8" placeholder="อย่างน้อย 8 ตัวอักษร" required="" type="password"/>
+      </div>
+      <label class="checkbox-line">
+       <input required="" type="checkbox"/>
+       <span>
+        ยอมรับการใช้ข้อมูลสำหรับการสมัครเรียน
+       </span>
+      </label>
+      <button class="btn btn-primary account-submit" type="submit">
+       สร้างบัญชี
+      </button>
+     </form>
+     <p class="account-switch">
+      มีบัญชีแล้ว?
+      <a class="text-link" href="login.html">
+       เข้าสู่ระบบ
+      </a>
+     </p>
+     <small class="demo-note">
+      หน้าตัวอย่างสำหรับโครงงาน • กรอกครบแล้วไปหน้าถัดไป ยังไม่บันทึกหรือตรวจสอบบัญชี
+     </small>
     </section>
-    <div class="course-columns">
-     <section aria-label="รายละเอียดการศึกษาและคุณสมบัติผู้เรียน" class="course-facts">
-      <h2>
-       เกณฑ์การสำเร็จการศึกษา
-      </h2>
-      <p>
-       102 หน่วยกิต
-      </p>
-      <h2>
-       คุณวุฒิผู้เรียน
-      </h2>
-      <p>
-       จบประกาศนียบัตรวิชาชีพชั้นสูง ปวส. หรือ อนุปริญญา ทางพาณิชยกรรม บริหารธุรกิจ
-      </p>
-      <h2>
-       ค่าเล่าเรียน
-      </h2>
-      <p>
-       19,000 บาท / ภาคการศึกษา
-      </p>
-     </section>
-     <section aria-labelledby="itt-careers-heading" class="course-careers">
-      <h2 id="itt-careers-heading">
-       อาชีพหลังสำเร็จการศึกษา
-      </h2>
-      <ul>
-       <li>
-        นักพัฒนาซอฟต์แวร์
-       </li>
-       <li>
-        นักพัฒนาแอปพลิเคชัน
-       </li>
-       <li>
-        นักพัฒนาเว็บไซต์
-       </li>
-       <li>
-        นักออกแบบ UX/UI
-       </li>
-       <li>
-        นักวิเคราะห์ธุรกิจ
-       </li>
-      </ul>
-     </section>
-    </div>
-   </article>
+   </div>
   </main>
   <!-- ===== Footer ===== -->
   <footer class="footer">

@@ -1,0 +1,37 @@
+.print-main { padding: 40px 0; }
+.print-toolbar { margin-bottom: 24px; }
+.print-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.print-help { font-size: 14px; color: var(--text-light); margin-top: 12px; }
+.receipt-sheet { max-width: 794px; margin: 0 auto; padding: 36px; background: #fff; border: 1px solid var(--line); color: #111; }
+.receipt-header { display: flex; align-items: center; gap: 18px; padding-bottom: 20px; border-bottom: 2px solid var(--primary); }
+.receipt-header img { width: 64px; height: 64px; object-fit: contain; }
+.receipt-header h2 { font-size: 19px; }
+.receipt-header small { color: #666; font-size: 12px; }
+.receipt-meta { margin: 20px 0; font-size: 14px; }
+.receipt-section { margin-bottom: 24px; }
+.receipt-section h2 { font-size: 17px; color: var(--primary); border-bottom: 1px solid #ddd; padding-bottom: 6px; margin-bottom: 8px; }
+.receipt-section dl > div { display: grid; grid-template-columns: minmax(0, 240px) minmax(0, 1fr); gap: 16px; margin-bottom: 7px; font-size: 13px; break-inside: avoid; }
+.receipt-section dt { color: #555; }
+.receipt-section dd { overflow-wrap: anywhere; }
+.receipt-signature { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 24px; font-size: 13px; break-inside: avoid; }
+.receipt-note { font-size: 11px; color: #666; margin-top: 20px; }
+@media(max-width:600px) { .print-main { padding: 24px 0; } .receipt-sheet { padding: 20px; } .receipt-header { align-items: flex-start; } .receipt-header h2 { font-size: 16px; } .receipt-section dl > div { grid-template-columns: 1fr; gap: 3px; } }
+@page { size: A4; margin: 15mm; }
+@media print {
+    html,body { background: #fff; min-height: auto; display: block; }
+    .site-header,body > .footer,.print-toolbar,[data-print-empty] { display: none !important; }
+    .print-main { width: 100%; max-width: none; margin: 0; padding: 0; }
+    .receipt-sheet { width: 100%; max-width: none; border: 0; padding: 0; margin: 0; }
+    .receipt-header,.receipt-meta { break-inside: avoid; }
+    .receipt-section h2 { break-after: avoid; }
+    .receipt-section dl > div { display: grid; grid-template-columns: 65mm minmax(0,1fr); gap: 5mm; }
+    .receipt-header img { width: 18mm; height: 18mm; }
+    .receipt-header h2 { font-size: 15pt; }
+    .receipt-header p { font-size: 12pt; }
+    .receipt-section h2 { font-size: 12pt; }
+    .receipt-section dl > div,.receipt-meta { font-size: 9.5pt; line-height: 1.45; }
+    .receipt-section dl > div { margin-bottom: 3px; }
+    .receipt-section { margin-bottom: 16px; }
+    .receipt-section:not(:first-child) { break-inside: avoid; }
+    a { color: #111; }
+}
