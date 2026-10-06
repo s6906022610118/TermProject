@@ -9,7 +9,7 @@ body:has(.login-section) { background: #fff; }
 .form-group input { display: block; width: 100%; min-height: 46px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--text); }
 .form-group input::placeholder { color: #7c8596; }
 .checkbox-line { display: flex; align-items: flex-start; gap: 8px; margin: 14px 0; font-size: 14px; }
-.checkbox-line input { width: 16px; height: 16px; margin-top: 4px; accent-color: var(--primary); flex-shrink: 0; }
+.checkbox-line input { width: 13px; height: 13px; margin-top: 3px; accent-color: var(--primary); flex-shrink: 0; }
 .account-submit { width: 100%; margin-top: 8px; }
 .account-switch { margin-top: 16px; font-size: 14px; font-weight: 600; }
 .account-switch a { margin-left: 10px; }

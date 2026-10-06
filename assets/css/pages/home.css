@@ -16,9 +16,10 @@
 .section-title h2, .schedule-title h2, .news-title h2 { font-size: 26px; font-weight: 600; }
 .section-title p { color: var(--text-light); margin-top: 8px; }
 .rounds-image-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; }
-.round-img-item { display: block; border-radius: 6px; border: 1px solid transparent; }
+.round-img-item { display: block; position: relative; aspect-ratio: 1; overflow: hidden; border-radius: 6px; border: 1px solid transparent; }
 .round-img-item:hover { border-color: var(--primary); background: #fff; }
-.round-img-item img { display: block; width: 100%; height: auto; }
+.round-img-item img { display: block; position: absolute; width: 118%; max-width: none; height: auto; left: -9%; top: -9%; }
+.round-img-item:last-child img { width: 114%; left: -7%; top: -7%; }
 .admission-schedule,.admission-news { padding: 24px 0 40px; }
 .schedule-title,.news-title { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
 .bookmark-icon { display: inline-flex; align-items: center; gap: 5px; }
