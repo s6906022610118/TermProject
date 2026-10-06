@@ -6,10 +6,10 @@
   <title>
    เข้าสู่ระบบ | KMUTNB Admission
   </title>
-  <link href="../../assets/css/shared/base.css?v=validation-7" rel="stylesheet"/>
-  <link href="../../assets/css/shared/footer.css?v=validation-7" rel="stylesheet"/>
-  <link href="../../assets/css/shared/navbar.css?v=validation-7" rel="stylesheet"/>
-  <link href="../../assets/css/pages/login.css?v=validation-7" rel="stylesheet"/>
+  <link href="../../assets/css/shared/base.css?v=validation-8" rel="stylesheet"/>
+  <link href="../../assets/css/shared/footer.css?v=validation-8" rel="stylesheet"/>
+  <link href="../../assets/css/shared/navbar.css?v=validation-8" rel="stylesheet"/>
+  <link href="../../assets/css/pages/login.css?v=validation-8" rel="stylesheet"/>
  </head>
  <body>
   <header class="site-header">
@@ -79,9 +79,9 @@
        <label for="password">
         รหัสผ่าน
        </label>
-       <input aria-describedby="password-hint" autocapitalize="off" autocomplete="current-password" autocorrect="off" id="password" maxlength="128" minlength="10" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[^\p{L}\p{N}\s])\S{10,128}" placeholder="อย่างน้อย 10 ตัว: A–Z, a–z, 0–9 และอักขระพิเศษ" required="" spellcheck="false" title="รหัสผ่าน 10–128 ตัว ต้องมีตัวใหญ่ ตัวเล็ก ตัวเลข และอักขระพิเศษ ห้ามเว้นวรรค" type="password"/>
+       <input aria-describedby="password-hint" autocapitalize="off" autocomplete="current-password" autocorrect="off" id="password" maxlength="128" minlength="10" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%&amp;*?_])[A-Za-z0-9!@#$%&amp;*?_]{10,128}" placeholder="อย่างน้อย 10 ตัว: A–Z, a–z, 0–9 และอักขระพิเศษ" required="" spellcheck="false" title="ใช้ภาษาอังกฤษ 10–128 ตัว มี A–Z, a–z, 0–9 และอักขระ ! @ # $ % &amp; * ? _ อย่างน้อยประเภทละ 1 ตัว" type="password"/>
        <small class="field-hint" id="password-hint">
-        10–128 ตัว รวม A–Z, a–z, ตัวเลข และอักขระพิเศษ เช่น ! @ # ห้ามเว้นวรรค
+        10–128 ตัว: A–Z, a–z, 0–9 และ ! @ # $ % &amp; * ? _ อย่างน้อยประเภทละ 1 ตัว ไม่ใช้ภาษาไทยหรือเว้นวรรค
        </small>
       </div>
       <button class="btn btn-primary account-submit" type="submit">
