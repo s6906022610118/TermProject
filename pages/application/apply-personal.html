@@ -6,10 +6,10 @@
   <title>
    ข้อมูลส่วนตัว | KMUTNB Admission
   </title>
-  <link href="../../assets/css/shared/base.css?v=validation-7" rel="stylesheet"/>
-  <link href="../../assets/css/shared/footer.css?v=validation-7" rel="stylesheet"/>
-  <link href="../../assets/css/shared/navbar.css?v=validation-7" rel="stylesheet"/>
-  <link href="../../assets/css/pages/application.css?v=validation-7" rel="stylesheet"/>
+  <link href="../../assets/css/shared/base.css?v=name-pattern-9" rel="stylesheet"/>
+  <link href="../../assets/css/shared/footer.css?v=name-pattern-9" rel="stylesheet"/>
+  <link href="../../assets/css/shared/navbar.css?v=name-pattern-9" rel="stylesheet"/>
+  <link href="../../assets/css/pages/application.css?v=name-pattern-9" rel="stylesheet"/>
  </head>
  <body>
   <header class="site-header">
@@ -112,14 +112,14 @@
          ชื่อ
          *
         </label>
-        <input id="thai-first-name" maxlength="100" minlength="2" pattern="(?=.*\p{L})[\p{L}\p{M}\s.\x27’\-]{2,100}" placeholder="กรอกข้อมูล" required="" title="กรอกชื่อเป็นตัวอักษรอย่างน้อย 2 ตัว ไม่ใช้ตัวเลข" type="text"/>
+        <input id="thai-first-name" maxlength="100" minlength="2" pattern="[ก-ฮะ-์]+" placeholder="กรอกชื่อภาษาไทย" required="" title="กรอกเฉพาะตัวอักษรภาษาไทย ไม่ใช้ภาษาอังกฤษ ตัวเลข หรือเว้นวรรค" type="text"/>
        </div>
        <div class="personal-field">
         <label for="thai-last-name">
          นามสกุล
          *
         </label>
-        <input id="thai-last-name" maxlength="100" minlength="2" pattern="(?=.*\p{L})[\p{L}\p{M}\s.\x27’\-]{2,100}" placeholder="กรอกข้อมูล" required="" title="กรอกชื่อเป็นตัวอักษรอย่างน้อย 2 ตัว ไม่ใช้ตัวเลข" type="text"/>
+        <input id="thai-last-name" maxlength="100" minlength="2" pattern="[ก-ฮะ-์]+" placeholder="กรอกนามสกุลภาษาไทย" required="" title="กรอกเฉพาะตัวอักษรภาษาไทย ไม่ใช้ภาษาอังกฤษ ตัวเลข หรือเว้นวรรค" type="text"/>
        </div>
        <div class="personal-field">
         <label for="english-title">
@@ -146,14 +146,14 @@
          First Name
          *
         </label>
-        <input id="english-first-name" maxlength="100" minlength="2" pattern="(?=.*[A-Za-z])[A-Za-z\s.\x27\-]{2,100}" placeholder="กรอกข้อมูล" required="" title="กรอกชื่อภาษาอังกฤษอย่างน้อย 2 ตัว ไม่ใช้ตัวเลข" type="text"/>
+        <input id="english-first-name" maxlength="100" minlength="2" pattern="(?:[A-Z][a-z]+|[A-Z]+)" placeholder="เช่น Somchai หรือ SOMCHAI" required="" title="ใช้ภาษาอังกฤษ ขึ้นต้นด้วยตัวใหญ่ เช่น Somchai หรือใช้ตัวใหญ่ทั้งหมด SOMCHAI" type="text"/>
        </div>
        <div class="personal-field">
         <label for="english-last-name">
          Last Name
          *
         </label>
-        <input id="english-last-name" maxlength="100" minlength="2" pattern="(?=.*[A-Za-z])[A-Za-z\s.\x27\-]{2,100}" placeholder="กรอกข้อมูล" required="" title="กรอกชื่อภาษาอังกฤษอย่างน้อย 2 ตัว ไม่ใช้ตัวเลข" type="text"/>
+        <input id="english-last-name" maxlength="100" minlength="2" pattern="(?:[A-Z][a-z]+|[A-Z]+)" placeholder="เช่น Somchai หรือ SOMCHAI" required="" title="ใช้ภาษาอังกฤษ ขึ้นต้นด้วยตัวใหญ่ เช่น Somchai หรือใช้ตัวใหญ่ทั้งหมด SOMCHAI" type="text"/>
        </div>
        <div class="personal-field">
         <label for="birth-place">
