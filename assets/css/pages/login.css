@@ -1,21 +1,24 @@
-.login-section { padding: 40px 24px; display: grid; place-items: center; }
-.account-panel { display: grid; grid-template-columns: minmax(0,400px) minmax(0,512px); gap: 32px; width: 100%; max-width: 1000px; padding: 28px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
-.account-intro img { width: 100%; height: 260px; object-fit: cover; margin-bottom: 20px; }
-.account-intro h2 { font-size: 26px; margin-bottom: 16px; }
-.account-intro p { color: var(--text-light); }
+body:has(.login-section) { background: #fff; }
+.login-section { padding: 90px 24px 60px; display: grid; place-items: center; }
+.account-panel { position: relative; width: 100%; max-width: 660px; padding: 76px 80px 28px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
 .account-form { min-width: 0; }
-.account-profile { display: block; width: 44px; height: 44px; object-fit: contain; margin-bottom: 16px; }
-.account-form h1 { font-size: 28px; }
-.account-form .page-description { font-size: 15px; margin-bottom: 20px; }
+.account-form h1 { font-size: 26px; text-align: center; }
+.account-form .page-description { font-size: 15px; margin: 12px 0 24px; text-align: center; }
 .form-group { margin-bottom: 16px; }
-.form-group label { display: block; font-weight: 600; margin-bottom: 8px; }
-.form-group input { display: block; width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--text); }
+.form-group label { display: block; font-weight: 600; font-size: 15px; margin-bottom: 8px; }
+.form-group input { display: block; width: 100%; min-height: 46px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--text); }
 .form-group input::placeholder { color: #7c8596; }
-.form-group small { color: var(--text-light); font-size: 12px; display: block; margin-top: 5px; }
 .checkbox-line { display: flex; align-items: flex-start; gap: 8px; margin: 14px 0; font-size: 14px; }
 .checkbox-line input { width: 16px; height: 16px; margin-top: 4px; accent-color: var(--primary); flex-shrink: 0; }
-.account-submit { width: 100%; margin-top: 4px; }
-.account-switch { margin-top: 16px; font-size: 15px; }
-.demo-note { display: block; margin-top: 20px; color: var(--text-light); font-size: 12px; }
-@media(max-width:800px) { .account-panel { grid-template-columns: 1fr; max-width: 560px; } .account-intro { display: none; } }
-@media(max-width:480px) { .login-section { padding: 24px 16px; } .account-panel { padding: 22px; } .account-form h1 { font-size: 26px; } }
+.account-submit { width: 100%; margin-top: 8px; }
+.account-switch { margin-top: 16px; font-size: 14px; font-weight: 600; }
+.account-switch a { margin-left: 10px; }
+@media(max-width:600px) { .login-section { padding: 70px 16px 36px; } .account-panel { padding: 56px 24px 24px; } .account-form h1 { font-size: 26px; } }
+
+.account-icon { position: absolute; top: -40px; left: 50%; transform: translateX(-50%); width: 80px; height: 80px; border-radius: 50%; background: #ff2050; }
+.account-icon::before { content: ''; position: absolute; width: 20px; height: 20px; top: 18px; left: 30px; border-radius: 50%; background: #fff; }
+.account-icon::after { content: ''; position: absolute; width: 38px; height: 22px; top: 42px; left: 21px; border-radius: 10px 10px 5px 5px; background: #fff; }
+.masked-password { -webkit-text-security: disc; }
+form:has(#show-password:checked) .masked-password { -webkit-text-security: none; }
+.password-toggle { font-size: 13px; margin: 20px 0 16px; }
+.password-toggle input { width: 13px; height: 13px; margin-top: 3px; }

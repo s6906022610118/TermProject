@@ -1,13 +1,16 @@
-.review-content { max-width: 900px; padding: 40px 0; }
-.summary-list { display: grid; gap: 16px; }
-.summary-card { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding: 28px; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+body:has(.application-review) { background: #fff; }
+.review-content { max-width: 1120px; padding: 36px 0 48px; }
+.summary-list { display: grid; gap: 22px; }
+.summary-card { display: flex; justify-content: space-between; align-items: center; gap: 24px; min-height: 88px; padding: 18px 24px; background: #fff0da; border: 1px solid #e86643; border-radius: 7px; }
 .summary-text { min-width: 0; }
-.summary-text h2 { margin-bottom: 12px; font-size: 20px; }
-.summary-text p { font-size: 16px; color: var(--text-light); overflow-wrap: anywhere; }
-.summary-card > a { flex-shrink: 0; color: var(--primary); font-weight: 600; padding: 4px 12px; border: 1px solid var(--line); border-radius: 6px; }
-.summary-card > a:hover { background: var(--soft); }
-.review-confirmation { margin-top: 24px; }
-.review-confirmation label { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
-.review-confirmation input { width: 18px; height: 18px; accent-color: var(--primary); }
-.review-actions { display: flex; gap: 16px; }
-@media(max-width:600px) { .review-content { padding: 24px 0; } .summary-card { padding: 20px; gap: 16px; } .review-actions { flex-direction: column-reverse; } }
+.summary-text h2 { margin-bottom: 8px; font-size: 16px; font-weight: 600; }
+.summary-text p { font-size: 13px; line-height: 1.5; color: var(--text); overflow-wrap: anywhere; }
+.summary-card > a { flex-shrink: 0; color: #c90018; font-size: 14px; font-weight: 600; padding: 8px 20px; border-radius: 4px; }
+.summary-card > a:hover { background: #ffe2bb; }
+.review-confirmation { margin-top: 64px; }
+.review-actions { display: flex; justify-content: space-between; gap: 16px; }
+.review-actions .btn { min-width: 150px; min-height: 40px; font-size: 14px; border-radius: 5px; }
+.review-actions .btn-outline { border-color: #ed3c4c; color: #111; }
+.review-actions .btn-primary { background: #c90018; }
+.review-actions .btn-primary:hover { background: #a70014; }
+@media(max-width:600px) { .review-content { padding: 24px 0; } .summary-card { padding: 16px; gap: 10px; } .summary-card > a { padding: 8px; } .summary-list { gap: 16px; } .review-confirmation { margin-top: 40px; } .review-actions .btn { min-width: 0; padding-inline: 16px; } }

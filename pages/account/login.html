@@ -6,10 +6,10 @@
   <title>
    เข้าสู่ระบบ | KMUTNB Admission
   </title>
-  <link href="../../assets/css/shared/base.css" rel="stylesheet"/>
-  <link href="../../assets/css/shared/footer.css" rel="stylesheet"/>
-  <link href="../../assets/css/shared/navbar.css" rel="stylesheet"/>
-  <link href="../../assets/css/pages/login.css" rel="stylesheet"/>
+  <link href="../../assets/css/shared/base.css?v=account-layout-4" rel="stylesheet"/>
+  <link href="../../assets/css/shared/footer.css?v=account-layout-4" rel="stylesheet"/>
+  <link href="../../assets/css/shared/navbar.css?v=account-layout-4" rel="stylesheet"/>
+  <link href="../../assets/css/pages/login.css?v=account-layout-4" rel="stylesheet"/>
  </head>
  <body>
   <header class="site-header">
@@ -21,10 +21,10 @@
      </span>
      <span class="brand-name">
       <span class="logo-top">
-       ระบบรับสมัครนักศึกษาใหม่
+       รับสมัครนักศึกษาใหม่ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
       </span>
       <span class="logo-bottom">
-       มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+       KMUTNB ADMISSION
       </span>
      </span>
     </a>
@@ -59,19 +59,9 @@
   <!-- ===== Login ===== -->
   <main class="login-section">
    <div class="account-panel">
-    <aside class="account-intro">
-     <img alt="บรรยากาศมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ" src="../../assets/images/pic1.jpg"/>
-     <h2>
-      เริ่มต้นเส้นทางการเรียนของคุณ
-     </h2>
-     <p>
-      สมัครบัญชี กรอกข้อมูล และตรวจสอบใบสมัคร
-      <br/>
-      ได้ในที่เดียว
-     </p>
-    </aside>
+    <span aria-hidden="true" class="account-icon">
+    </span>
     <section class="account-form">
-     <img alt="บัญชีผู้สมัคร" class="account-profile" src="../../assets/images/profile.png"/>
      <h1>
       เข้าสู่ระบบ
      </h1>
@@ -81,16 +71,22 @@
      <form action="../application/apply-personal.html" method="get">
       <div class="form-group">
        <label for="email">
-        อีเมล *
+        อีเมล
        </label>
        <input autocomplete="email" id="email" maxlength="200" placeholder="name@example.com" required="" type="email"/>
       </div>
       <div class="form-group">
        <label for="password">
-        รหัสผ่าน *
+        รหัสผ่าน
        </label>
-       <input autocomplete="current-password" id="password" minlength="8" placeholder="กรอกรหัสผ่าน" required="" type="password"/>
+       <input autocapitalize="off" autocomplete="current-password" autocorrect="off" class="masked-password" id="password" minlength="8" placeholder="กรอกรหัสผ่าน" required="" spellcheck="false" type="text"/>
       </div>
+      <label class="checkbox-line password-toggle">
+       <input id="show-password" type="checkbox"/>
+       <span>
+        แสดงรหัสผ่าน
+       </span>
+      </label>
       <button class="btn btn-primary account-submit" type="submit">
        เข้าสู่ระบบ
       </button>
@@ -101,9 +97,6 @@
        สมัครบัญชีผู้สมัคร
       </a>
      </p>
-     <small class="demo-note">
-      หน้าตัวอย่างสำหรับโครงงาน • กรอกครบแล้วไปหน้าถัดไป ยังไม่บันทึกหรือตรวจสอบบัญชี
-     </small>
     </section>
    </div>
   </main>
@@ -112,7 +105,7 @@
    <div class="footer-content">
     <div class="footer-contact">
      <h3 class="footer-heading">
-      ติดต่อ มจพ. วิทยาเขตปราจีนบุรี
+      ติดต่อ มจพ. ปราจีนบุรี
      </h3>
      <div class="footer-info-row">
       <img alt="Location" class="footer-icon" src="../../assets/images/location-icon.png"/>

@@ -8,11 +8,11 @@
    ตรวจสอบข้อมูล | KMUTNB Admission
   </title>
   <!-- โหลดของกลาง หัวเว็บ และหน้าตาหน้าตรวจสอบตามลำดับ -->
-  <link href="../../assets/css/shared/base.css" rel="stylesheet"/>
-  <link href="../../assets/css/shared/footer.css" rel="stylesheet"/>
-  <link href="../../assets/css/shared/navbar.css" rel="stylesheet"/>
-  <link href="../../assets/css/pages/review.css" rel="stylesheet"/>
-  <link href="../../assets/css/pages/application.css" rel="stylesheet"/>
+  <link href="../../assets/css/shared/base.css?v=review-layout-2" rel="stylesheet"/>
+  <link href="../../assets/css/shared/footer.css?v=review-layout-2" rel="stylesheet"/>
+  <link href="../../assets/css/shared/navbar.css?v=review-layout-2" rel="stylesheet"/>
+  <link href="../../assets/css/pages/review.css?v=review-layout-2" rel="stylesheet"/>
+  <link href="../../assets/css/pages/application.css?v=review-layout-2" rel="stylesheet"/>
  </head>
  <body>
   <header class="site-header">
@@ -24,10 +24,10 @@
      </span>
      <span class="brand-name">
       <span class="logo-top">
-       ระบบรับสมัครนักศึกษาใหม่
+       รับสมัครนักศึกษาใหม่ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
       </span>
       <span class="logo-bottom">
-       มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+       KMUTNB ADMISSION
       </span>
      </span>
     </a>
@@ -52,9 +52,6 @@
      <a aria-label="โปรไฟล์" class="nav-profile" href="../account/login.html">
       <img alt="โปรไฟล์" src="../../assets/images/profile.png"/>
      </a>
-     <a class="logout-link" href="../account/login.html">
-      ออกจากระบบ
-     </a>
     </nav>
    </div>
    <div class="navbar-accent-bar">
@@ -67,7 +64,7 @@
      ตรวจสอบข้อมูลการสมัคร
     </h1>
     <p class="page-description">
-     ตรวจสอบข้อมูลทุกส่วนก่อนยืนยัน สามารถย้อนกลับไปแก้ไขได้
+     ตรวจสอบข้อมูลตัวอย่างก่อนยืนยัน สามารถย้อนกลับไปแก้ไขแต่ละขั้นตอนได้
     </p>
     <!-- ขั้นที่ 5 เป็นหน้าปัจจุบัน และทุกขั้นใช้สีแดงเพื่อบอกว่าเดินมาถึงท้ายแล้ว -->
     <ol aria-label="ขั้นตอนสมัครเรียน" class="review-steps">
@@ -96,7 +93,7 @@
         ข้อมูลส่วนตัว
        </h2>
        <p>
-        ข้อมูลจากขั้นตอนก่อนหน้าจะเชื่อมต่อเมื่อเพิ่มระบบบันทึกข้อมูล
+        นางสาวพรทิพย์ ใจรักเรียน • โทร 09x-xxx-xxxx
        </p>
       </div>
       <a href="apply-personal.html">
@@ -110,7 +107,7 @@
         ข้อมูลผู้ปกครอง
        </h2>
        <p>
-        ข้อมูลจากขั้นตอนก่อนหน้าจะเชื่อมต่อเมื่อเพิ่มระบบบันทึกข้อมูล
+        นายสมชาย ใจรักเรียน • โทร 08x-xxx-xxxx
        </p>
       </div>
       <a href="apply-parent.html">
@@ -124,7 +121,7 @@
         ข้อมูลการศึกษา
        </h2>
        <p>
-        ข้อมูลจากขั้นตอนก่อนหน้าจะเชื่อมต่อเมื่อเพิ่มระบบบันทึกข้อมูล
+        โรงเรียนตัวอย่างวิทยา • ปราจีนบุรี • วิทย์–คณิต • เกรดเฉลี่ย 3.98
        </p>
       </div>
       <a href="apply-education.html">
@@ -138,7 +135,7 @@
         หลักสูตร
        </h2>
        <p>
-        ข้อมูลจากขั้นตอนก่อนหน้าจะเชื่อมต่อเมื่อเพิ่มระบบบันทึกข้อมูล
+        คณะเทคโนโลยีและการจัดการอุตสาหกรรม • วิศวกรรมสารสนเทศและเครือข่าย • รอบ Quota • โครงการรับตรงใช้คะแนน A-Level
        </p>
       </div>
       <a href="select-program.html">
@@ -146,14 +143,8 @@
       </a>
      </section>
     </div>
-    <!-- required บังคับให้ติ๊กยืนยันก่อน ส่วน action พาไปหน้าสำเร็จ -->
+    ยืนยันการสมัครจะไปหน้าสำเร็จ ข้อมูลในหน้านี้เป็นตัวอย่างที่พิมพ์ไว้
     <form action="success.html" class="review-confirmation" method="get">
-     <label>
-      <input required="" type="checkbox"/>
-      <span>
-       ยืนยันว่าข้อมูลถูกต้อง
-      </span>
-     </label>
      <div class="review-actions">
       <a class="btn btn-outline" href="select-program.html">
        ย้อนกลับ
@@ -171,7 +162,7 @@
     <!-- ฝั่งซ้ายเก็บที่อยู่ เบอร์โทร และอีเมล -->
     <div class="footer-contact">
      <h3 class="footer-heading">
-      ติดต่อ มจพ. วิทยาเขตปราจีนบุรี
+      ติดต่อ มจพ. ปราจีนบุรี
      </h3>
      <div class="footer-info-row">
       <img alt="Location" class="footer-icon" src="../../assets/images/location-icon.png"/>

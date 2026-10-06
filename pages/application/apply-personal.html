@@ -21,10 +21,10 @@
      </span>
      <span class="brand-name">
       <span class="logo-top">
-       ระบบรับสมัครนักศึกษาใหม่
+       รับสมัครนักศึกษาใหม่ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
       </span>
       <span class="logo-bottom">
-       มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+       KMUTNB ADMISSION
       </span>
      </span>
     </a>
@@ -48,9 +48,6 @@
      </ul>
      <a aria-label="โปรไฟล์" class="nav-profile" href="../account/login.html">
       <img alt="โปรไฟล์" src="../../assets/images/profile.png"/>
-     </a>
-     <a class="logout-link" href="../account/login.html">
-      ออกจากระบบ
      </a>
     </nav>
    </div>
@@ -235,9 +232,9 @@
        </div>
        <div class="personal-field">
         <label for="health-condition">
-         โรคประจำตัว (ถ้ามี)
+         โรคประจำตัว (ถ้ามี) *
         </label>
-        <input id="health-condition" inputmode="tel" placeholder="ไม่มี หรือระบุโรคประจำตัว" type="text"/>
+        <input id="health-condition" inputmode="tel" placeholder="ไม่มี หรือระบุโรคประจำตัว" required="" type="text"/>
        </div>
        <div class="personal-field">
         <label for="email">
@@ -251,43 +248,49 @@
          เบอร์โทรศัพท์
          *
         </label>
-        <input id="mobile-phone" inputmode="tel" placeholder="0xx-xxx-xxxx" required="" type="tel"/>
+        <input id="mobile-phone" inputmode="tel" maxlength="10" pattern="0[0-9]{8,9}" placeholder="เช่น 0812345678" required="" title="กรอกเบอร์โทร 9–10 หลัก ขึ้นต้นด้วย 0 ไม่ใส่ขีดหรือเว้นวรรค" type="tel"/>
        </div>
        <div class="personal-field">
         <label for="military-document">
-         แนบรูปภาพตนเอง
+         แนบรูปภาพตนเอง *
         </label>
-        <input accept="image/*" id="military-document" type="file"/>
+        <input accept="image/*" id="military-document" required="" type="file"/>
         <small>
          รองรับรูปภาพหรือ PDF • เก็บเฉพาะชื่อไฟล์ในโหมดสาธิต
         </small>
        </div>
        <div class="personal-field">
         <label for="id-card-copy">
-         แนบสำเนาบัตรประชาชน
+         แนบสำเนาบัตรประชาชน *
         </label>
-        <input accept="image/*,.pdf" id="id-card-copy" type="file"/>
+        <input accept="image/*,.pdf" id="id-card-copy" required="" type="file"/>
         <small>
          รองรับรูปภาพหรือ PDF • เก็บเฉพาะชื่อไฟล์ในโหมดสาธิต
         </small>
        </div>
        <div class="personal-field">
         <label for="house-copy">
-         แนบสำเนาทะเบียนบ้าน
+         แนบสำเนาทะเบียนบ้าน *
         </label>
-        <input accept="image/*,.pdf" id="house-copy" type="file"/>
+        <input accept="image/*,.pdf" id="house-copy" required="" type="file"/>
         <small>
          รองรับรูปภาพหรือ PDF • เก็บเฉพาะชื่อไฟล์ในโหมดสาธิต
         </small>
        </div>
        <div class="personal-field">
         <label for="name-change-copy">
-         แนบใบเปลี่ยนชื่อ - สกุล (ถ้ามี)
+         แนบใบเปลี่ยนชื่อ - สกุล (ถ้ามี) *
         </label>
-        <input accept="image/*,.pdf" id="name-change-copy" type="file"/>
+        <input accept="image/*,.pdf" id="name-change-copy" required="" type="file"/>
         <small>
          รองรับรูปภาพหรือ PDF • เก็บเฉพาะชื่อไฟล์ในโหมดสาธิต
         </small>
+       </div>
+       <div class="personal-field">
+        <label for="applicant-card">
+         แนบสำเนาบัตรประชาชนผู้สมัคร *
+        </label>
+        <input accept="image/*,.pdf" id="applicant-card" required="" type="file"/>
        </div>
       </div>
       <!-- ชื่อภาษาอังกฤษ -->
@@ -295,7 +298,7 @@
      </div>
      <div class="personal-actions">
       <button class="btn btn-primary" type="submit">
-       บันทึกและถัดไป
+       ถัดไป
       </button>
      </div>
     </form>
@@ -306,7 +309,7 @@
    <div class="footer-content">
     <div class="footer-contact">
      <h3 class="footer-heading">
-      ติดต่อ มจพ. วิทยาเขตปราจีนบุรี
+      ติดต่อ มจพ. ปราจีนบุรี
      </h3>
      <div class="footer-info-row">
       <img alt="Location" class="footer-icon" src="../../assets/images/location-icon.png"/>

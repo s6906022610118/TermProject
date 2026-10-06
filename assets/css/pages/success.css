@@ -1,8 +1,14 @@
-.success-main { display: grid; place-items: center; padding: 40px 24px; }
-.success-content { width: 100%; max-width: 680px; text-align: center; border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 40px 28px; }
-.success-image { display: block; width: 72px; height: 72px; object-fit: contain; margin: 0 auto 24px; }
-.success-content h1 { font-size: 30px; margin-bottom: 12px; }
-.success-date,.success-message { color: var(--text-light); font-size: 16px; }
-.success-number { margin: 24px 0; font-size: 18px; }
-.success-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
-@media(max-width:600px) { .success-main { padding: 24px 16px; } .success-content { padding: 28px 20px; } .success-content h1 { font-size: 26px; } .success-actions .btn { width: 100%; } }
+body:has(.success-main) { background: #fff; }
+.success-main { display: grid; place-items: center; padding: 70px 24px; }
+.success-content { width: 100%; max-width: 660px; text-align: center; border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 32px; }
+.success-image { display: block; width: 76px; height: 76px; object-fit: contain; margin: 0 auto 24px; }
+.success-content h1 { font-size: 28px; margin-bottom: 12px; }
+.success-date,.success-message { color: var(--text-light); font-size: 14px; margin-top: 6px; }
+.success-number { margin: 28px 0; font-size: 16px; text-align: left; }
+.success-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; }
+.success-actions .btn-primary { min-width: 240px; }
+.success-actions .btn-outline { min-width: 170px; }
+@media(max-width:600px) { .success-main { padding: 40px 16px; } .success-content { padding: 28px 20px; } .success-content h1 { font-size: 26px; } .success-actions { gap: 12px; } .success-actions .btn { width: 100%; min-width: 0; } }
+
+.success-icon { position: relative; display: block; width: 70px; height: 70px; margin: 0 auto 22px; border-radius: 50%; background: #ff2050; }
+.success-icon::after { content: ''; position: absolute; width: 32px; height: 18px; top: 23px; left: 19px; border: solid #fff; border-width: 0 0 8px 8px; transform: rotate(-45deg); border-radius: 3px; }

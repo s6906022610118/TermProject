@@ -35,3 +35,19 @@
     .receipt-section:not(:first-child) { break-inside: avoid; }
     a { color: #111; }
 }
+/* Static application example, laid out as a printable sheet. */
+body:has(.print-main) { background: #fff; }
+.receipt-sheet { max-width: 900px; min-height: 1100px; padding: 40px 64px 70px; border-radius: 6px; }
+.receipt-header { flex-direction: column; text-align: center; border-bottom: 0; gap: 16px; }
+.receipt-header img { width: 130px; height: auto; }
+.receipt-header h2 { font-size: 24px; }
+.receipt-header p { text-align: left; margin-top: 28px; font-size: 15px; font-weight: 600; }
+.receipt-header small { display: block; margin-top: 6px; }
+.receipt-meta { color: var(--text-light); font-size: 13px; }
+.receipt-section { margin-bottom: 28px; }
+.receipt-section h2 { border: 0; font-size: 16px; margin-bottom: 8px; }
+.receipt-section p { font-size: 13px; line-height: 1.6; }
+.receipt-signature { justify-content: flex-end; margin-top: 30px; gap: 12px; }
+.print-help:target { padding: 12px; background: #fff0da; border: 1px solid var(--primary); border-radius: 5px; }
+@media(max-width:600px) { .receipt-sheet { padding: 28px 20px; min-height: 0; } .receipt-header img { width: 110px; } .receipt-header h2 { font-size: 19px; } .receipt-header p { margin-top: 16px; } }
+@media print { .receipt-sheet { min-height: 0; border: 0; padding: 0; } .receipt-header img { width: 28mm; } .receipt-header h2 { font-size: 16pt; } .receipt-header p { margin-top: 12px; font-size: 11pt; } .receipt-section { margin-bottom: 16px; } .receipt-section p,.receipt-meta { font-size: 10pt; } .receipt-section h2 { font-size: 11pt; } .receipt-signature { margin-top: 20px; } }

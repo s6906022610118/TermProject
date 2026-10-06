@@ -21,10 +21,10 @@
      </span>
      <span class="brand-name">
       <span class="logo-top">
-       ระบบรับสมัครนักศึกษาใหม่
+       รับสมัครนักศึกษาใหม่ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
       </span>
       <span class="logo-bottom">
-       มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+       KMUTNB ADMISSION
       </span>
      </span>
     </a>
@@ -48,9 +48,6 @@
      </ul>
      <a aria-label="โปรไฟล์" class="nav-profile" href="../account/login.html">
       <img alt="โปรไฟล์" src="../../assets/images/profile.png"/>
-     </a>
-     <a class="logout-link" href="../account/login.html">
-      ออกจากระบบ
      </a>
     </nav>
    </div>
@@ -96,15 +93,15 @@
         </p>
         <div class="radio-options">
          <label>
-          <input name="father-status" type="radio" value="alive"/>
+          <input name="father-status" required="" type="radio" value="alive"/>
           มีชีวิตอยู่
          </label>
          <label>
-          <input name="father-status" type="radio" value="deceased"/>
+          <input name="father-status" required="" type="radio" value="deceased"/>
           เสียชีวิตแล้ว
          </label>
          <label>
-          <input name="father-status" type="radio" value="unknown"/>
+          <input name="father-status" required="" type="radio" value="unknown"/>
           ไม่ทราบ
          </label>
         </div>
@@ -112,9 +109,9 @@
        <div class="parent-grid">
         <div class="personal-field">
          <label for="father-prefix">
-          คำนำหน้า
+          คำนำหน้า *
          </label>
-         <select id="father-prefix">
+         <select id="father-prefix" required="">
           <option disabled="" selected="" value="">
            เลือก
           </option>
@@ -128,51 +125,51 @@
         </div>
         <div class="personal-field">
          <label for="father-first-name">
-          ชื่อ
+          ชื่อ *
          </label>
-         <input id="father-first-name" placeholder="กรอกข้อมูล" type="text"/>
+         <input id="father-first-name" placeholder="กรอกข้อมูล" required="" type="text"/>
         </div>
         <div class="personal-field">
          <label for="father-last-name">
-          นามสกุล
+          นามสกุล *
          </label>
-         <input id="father-last-name" placeholder="กรอกข้อมูล" type="text"/>
+         <input id="father-last-name" placeholder="กรอกข้อมูล" required="" type="text"/>
         </div>
         <div class="personal-field">
          <label for="father-id">
-          เลขบัตรประจำตัวประชาชน
+          เลขบัตรประจำตัวประชาชน *
          </label>
-         <input id="father-id" inputmode="numeric" maxlength="13" placeholder="กรอกข้อมูล" type="text"/>
+         <input id="father-id" inputmode="numeric" maxlength="13" pattern="[0-9]{13}" placeholder="กรอกข้อมูล" required="" title="กรอกเลขบัตรประชาชน 13 หลัก" type="text"/>
         </div>
         <div class="personal-field">
          <label for="father-address">
-          ที่อยู่ปัจจุบัน
+          ที่อยู่ปัจจุบัน *
          </label>
-         <input id="father-address" placeholder="กรอกข้อมูล" type="text"/>
+         <input id="father-address" placeholder="กรอกข้อมูล" required="" type="text"/>
         </div>
         <div class="personal-field">
          <label for="father-nationality">
-          สัญชาติ
+          สัญชาติ *
          </label>
-         <input id="father-nationality" placeholder="กรอกข้อมูล" type="text"/>
+         <input id="father-nationality" placeholder="กรอกข้อมูล" required="" type="text"/>
         </div>
         <div class="personal-field">
          <label for="father-race">
-          เชื้อชาติ
+          เชื้อชาติ *
          </label>
-         <input id="father-race" placeholder="กรอกข้อมูล" type="text"/>
+         <input id="father-race" placeholder="กรอกข้อมูล" required="" type="text"/>
         </div>
         <div class="personal-field">
          <label for="father-phone">
-          เบอร์โทรศัพท์
+          เบอร์โทรศัพท์ *
          </label>
-         <input id="father-phone" inputmode="tel" placeholder="0xx-xxx-xxxx" type="tel"/>
+         <input id="father-phone" inputmode="tel" maxlength="10" pattern="0[0-9]{8,9}" placeholder="เช่น 0812345678" required="" title="กรอกเบอร์โทร 9–10 หลัก ขึ้นต้นด้วย 0 ไม่ใส่ขีดหรือเว้นวรรค" type="tel"/>
         </div>
         <div class="personal-field">
          <label for="father-card">
-          แนบสำเนาบัตรประชาชน
+          แนบสำเนาบัตรประชาชน *
          </label>
-         <input accept="image/*,.pdf" id="father-card" type="file"/>
+         <input accept="image/*,.pdf" id="father-card" required="" type="file"/>
          <small>
           รองรับรูปภาพหรือ PDF • เก็บเฉพาะชื่อไฟล์ในโหมดสาธิต
          </small>
@@ -190,15 +187,15 @@
         </p>
         <div class="radio-options">
          <label>
-          <input name="mother-status" type="radio" value="alive"/>
+          <input name="mother-status" required="" type="radio" value="alive"/>
           มีชีวิตอยู่
          </label>
          <label>
-          <input name="mother-status" type="radio" value="deceased"/>
+          <input name="mother-status" required="" type="radio" value="deceased"/>
           เสียชีวิตแล้ว
          </label>
          <label>
-          <input name="mother-status" type="radio" value="unknown"/>
+          <input name="mother-status" required="" type="radio" value="unknown"/>
           ไม่ทราบ
          </label>
         </div>
@@ -206,9 +203,9 @@
        <div class="parent-grid">
         <div class="personal-field">
          <label for="mother-prefix">
-          คำนำหน้า
+          คำนำหน้า *
          </label>
-         <select id="mother-prefix">
+         <select id="mother-prefix" required="">
           <option disabled="" selected="" value="">
            เลือก
           </option>
@@ -225,51 +222,51 @@
         </div>
         <div class="personal-field">
          <label for="mother-first-name">
-          ชื่อ
+          ชื่อ *
          </label>
-         <input id="mother-first-name" placeholder="กรอกข้อมูล" type="text"/>
+         <input id="mother-first-name" placeholder="กรอกข้อมูล" required="" type="text"/>
         </div>
         <div class="personal-field">
          <label for="mother-last-name">
-          นามสกุล
+          นามสกุล *
          </label>
-         <input id="mother-last-name" placeholder="กรอกข้อมูล" type="text"/>
+         <input id="mother-last-name" placeholder="กรอกข้อมูล" required="" type="text"/>
         </div>
         <div class="personal-field">
          <label for="mother-id">
-          เลขบัตรประจำตัวประชาชน
+          เลขบัตรประจำตัวประชาชน *
          </label>
-         <input id="mother-id" inputmode="numeric" maxlength="13" placeholder="กรอกข้อมูล" type="text"/>
+         <input id="mother-id" inputmode="numeric" maxlength="13" pattern="[0-9]{13}" placeholder="กรอกข้อมูล" required="" title="กรอกเลขบัตรประชาชน 13 หลัก" type="text"/>
         </div>
         <div class="personal-field">
          <label for="mother-address">
-          ที่อยู่ปัจจุบัน
+          ที่อยู่ปัจจุบัน *
          </label>
-         <input id="mother-address" placeholder="กรอกข้อมูล" type="text"/>
+         <input id="mother-address" placeholder="กรอกข้อมูล" required="" type="text"/>
         </div>
         <div class="personal-field">
          <label for="mother-nationality">
-          สัญชาติ
+          สัญชาติ *
          </label>
-         <input id="mother-nationality" placeholder="กรอกข้อมูล" type="text"/>
+         <input id="mother-nationality" placeholder="กรอกข้อมูล" required="" type="text"/>
         </div>
         <div class="personal-field">
          <label for="mother-race">
-          เชื้อชาติ
+          เชื้อชาติ *
          </label>
-         <input id="mother-race" placeholder="กรอกข้อมูล" type="text"/>
+         <input id="mother-race" placeholder="กรอกข้อมูล" required="" type="text"/>
         </div>
         <div class="personal-field">
          <label for="mother-phone">
-          เบอร์โทรศัพท์
+          เบอร์โทรศัพท์ *
          </label>
-         <input id="mother-phone" inputmode="tel" placeholder="0xx-xxx-xxxx" type="tel"/>
+         <input id="mother-phone" inputmode="tel" maxlength="10" pattern="0[0-9]{8,9}" placeholder="เช่น 0812345678" required="" title="กรอกเบอร์โทร 9–10 หลัก ขึ้นต้นด้วย 0 ไม่ใส่ขีดหรือเว้นวรรค" type="tel"/>
         </div>
         <div class="personal-field">
          <label for="mother-card">
-          แนบสำเนาบัตรประชาชน
+          แนบสำเนาบัตรประชาชน *
          </label>
-         <input accept="image/*,.pdf" id="mother-card" type="file"/>
+         <input accept="image/*,.pdf" id="mother-card" required="" type="file"/>
          <small>
           รองรับรูปภาพหรือ PDF • เก็บเฉพาะชื่อไฟล์ในโหมดสาธิต
          </small>
@@ -324,7 +321,7 @@
           เลขบัตรประจำตัวประชาชน
           *
          </label>
-         <input id="guardian-id" inputmode="numeric" maxlength="13" placeholder="กรอกข้อมูล" required="" type="text"/>
+         <input id="guardian-id" inputmode="numeric" maxlength="13" pattern="[0-9]{13}" placeholder="กรอกข้อมูล" required="" title="กรอกเลขบัตรประชาชน 13 หลัก" type="text"/>
         </div>
         <div class="personal-field">
          <label for="guardian-address">
@@ -335,28 +332,28 @@
         </div>
         <div class="personal-field">
          <label for="guardian-nationality">
-          สัญชาติ
+          สัญชาติ *
          </label>
-         <input id="guardian-nationality" placeholder="กรอกข้อมูล" type="text"/>
+         <input id="guardian-nationality" placeholder="กรอกข้อมูล" required="" type="text"/>
         </div>
         <div class="personal-field">
          <label for="guardian-race">
-          เชื้อชาติ
+          เชื้อชาติ *
          </label>
-         <input id="guardian-race" placeholder="กรอกข้อมูล" type="text"/>
+         <input id="guardian-race" placeholder="กรอกข้อมูล" required="" type="text"/>
         </div>
         <div class="personal-field">
          <label for="guardian-email">
-          อีเมล
+          อีเมล *
          </label>
-         <input id="guardian-email" placeholder="name@example.com" type="email"/>
+         <input id="guardian-email" placeholder="name@example.com" required="" type="email"/>
         </div>
         <div class="personal-field">
          <label for="guardian-phone">
           เบอร์โทรศัพท์
           *
          </label>
-         <input id="guardian-phone" inputmode="tel" placeholder="0xx-xxx-xxxx" required="" type="tel"/>
+         <input id="guardian-phone" inputmode="tel" maxlength="10" pattern="0[0-9]{8,9}" placeholder="เช่น 0812345678" required="" title="กรอกเบอร์โทร 9–10 หลัก ขึ้นต้นด้วย 0 ไม่ใส่ขีดหรือเว้นวรรค" type="tel"/>
         </div>
         <div class="personal-field">
          <label for="guardian-relation">
@@ -367,9 +364,9 @@
         </div>
         <div class="personal-field">
          <label for="guardian-card">
-          แนบสำเนาบัตรประชาชน
+          แนบสำเนาบัตรประชาชน *
          </label>
-         <input accept="image/*,.pdf" id="guardian-card" type="file"/>
+         <input accept="image/*,.pdf" id="guardian-card" required="" type="file"/>
          <small>
           รองรับรูปภาพหรือ PDF • เก็บเฉพาะชื่อไฟล์ในโหมดสาธิต
          </small>
@@ -393,7 +390,7 @@
    <div class="footer-content">
     <div class="footer-contact">
      <h3 class="footer-heading">
-      ติดต่อ มจพ. วิทยาเขตปราจีนบุรี
+      ติดต่อ มจพ. ปราจีนบุรี
      </h3>
      <div class="footer-info-row">
       <img alt="Location" class="footer-icon" src="../../assets/images/location-icon.png"/>
